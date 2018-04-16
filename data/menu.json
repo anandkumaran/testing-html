@@ -8,8 +8,9 @@
 		"topics":[
 		],
 		"audio": false,
-		"overlay": true,
-		"video_url": "videos/video1_1080px.mp4"
+		"overlay": false,
+		"video_url": "videos/video1_1080px.mp4",
+		"video_url_small": "videos/video1_360px.mp4"
 	},
 	
 	{
@@ -20,7 +21,8 @@
 		],
 		"audio": false,
 		"overlay": true,
-		"video_url": "videos/video1_1080px.mp4"
+		"video_url": "videos/video1_1080px.mp4",
+		"video_url_small": "videos/video1_360px.mp4"
 	},
 	{
 		"module":"Pre-test",
@@ -31,7 +33,8 @@
 		"audio": true,
 		"audio_url": "audio/Narrator.mp3",
 		"overlay": false,
-		"video_url": "videos/video1_1080px.mp4"
+		"video_url": "videos/video1_1080px.mp4",
+		"video_url_small": "videos/video1_360px.mp4"
 	},
 		{
 		"module":"Importance of Fire Safety of the health",
@@ -40,8 +43,9 @@
 		"topics":[
 		],
 		"audio": false,
-		"overlay": true,
-		"video_url": "videos/video1_1080px.mp4"
+		"overlay": false,
+		"video_url": "videos/video1_1080px.mp4",
+		"video_url_small": "videos/video1_360px.mp4"
 	},
 	
 	{
@@ -53,7 +57,8 @@
 		"audio": true,
 		"audio_url": "audio/FireSafety2.mp3",
 		"overlay": false,
-		"video_url": "videos/video1_1080px.mp4"
+		"video_url": "videos/video1_1080px.mp4",
+		"video_url_small": "videos/video1_360px.mp4"
 	},
 	{
 		"module":"Fire Tetrahedron",
@@ -63,7 +68,8 @@
 		],
 		"audio": false,
 		"overlay": false,
-		"video_url": "videos/video1_1080px.mp4"
+		"video_url": "videos/video1_1080px.mp4",
+		"video_url_small": "videos/video1_360px.mp4"
 	},
 	{
 		"module":"Types of Fire",
@@ -73,7 +79,8 @@
 		],
 		"audio": false,
 		"overlay": false,
-		"video_url": "videos/video1_1080px.mp4"
+		"video_url": "videos/video1_1080px.mp4",
+		"video_url_small": "videos/video1_360px.mp4"
 	},
 	
 	{
@@ -84,7 +91,8 @@
 		],
 		"audio": false,
 		"overlay": false,
-		"video_url": "videos/video1_1080px.mp4"
+		"video_url": "videos/video1_1080px.mp4",
+		"video_url_small": "videos/video1_360px.mp4"
 	}
    ]
 }

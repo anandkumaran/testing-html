@@ -277,11 +277,11 @@ window.onload = function () {
 
     if(isMobileAndPortrait || isMobileAndLandscape) {
       $('.mobile-disable, .menu-bar .menu-icon').hide();
-      $('#rowcontent').css('marginTop', '37px')
-      $('#rowcontent').on('click', function() {
+      $('#rowcontent').on('touchstart touchmove', function() {
+        $('.container.wrapper').addClass('non-fixed');
         $('#navigation').css('bottom', '-80px');
+        $('.menu-bar').animate({'top': '-55px'}, 100);
         $('.toggle-button2').css('bottom', '-40px');
-        $('.menu-bar').animate({'top': '-55px'}, 100)
         barDisaplyed = true;
         callToggleDisplayBar(barDisaplyed)
       });
@@ -292,9 +292,10 @@ window.onload = function () {
     if(barDisaplyed) {
       clearTimeout(displayTime)
      displayTime = setTimeout(function() {
+        $('.container.wrapper').removeClass('non-fixed');
         $('#navigation').css('bottom', '0');
-        $('.toggle-button2').css('bottom', '7px');
         $('.menu-bar').animate({'top': '0'}, 100)
+        $('.toggle-button2').css('bottom', '10px');
       }, 5000);
     }
   }
@@ -380,6 +381,7 @@ window.onload = function () {
     var page_url = null;
     var header_id = null;
     var overlay_avail = false;
+    var video_url_small = '';
     var video_url = '';
 
 
@@ -392,6 +394,7 @@ window.onload = function () {
               module_index = menuData.modules[i].id;
               overlay_avail = menuData.modules[i].overlay;
               video_url = menuData.modules[i].video_url;
+              video_url_small = menuData.modules[i].video_url_small;
 
               if (menuData.modules[i].url) page_url = menuData.modules[i].url;
               break;
@@ -477,6 +480,7 @@ window.onload = function () {
                 indexObj.header_id = header_id;
                 indexObj.overlay_avail = overlay_avail;
                 indexObj.video_url = video_url;
+                indexObj.video_url_small = video_url_small;
 
                 return indexObj;
               }
@@ -1280,8 +1284,29 @@ var review = [], wholeReview = [];
     //console.log("nodePos :"+nodePos);
     //Display Finish Button
     if (nodePos == (nodeLen - 1)) {
-      $('.finishPara').css({ 'display': 'block' });
+      // $('.finishPara').css({ 'display': 'block' });
       $('.nav-next').css({ "display": "none" });
+      swal({
+          title: "You have completed your Post-Test", 
+          text: "Do you want to continue press Submit \n Do you want to review your answers press Review",
+          type: "",
+          showCancelButton: true,
+          confirmButtonClass: "btn-danger",
+          confirmButtonText: "Submit",
+          cancelButtonText: "Review",
+          closeOnConfirm: true,
+          closeOnCancel: false
+        },
+        function (isConfirm) {
+          if (isConfirm) {
+            showFinalScore();
+            swal.close();
+        } else {
+          swal.close();
+          currentPostQn =0
+          showReview();
+        }
+      });
     }
   }
 
@@ -1360,7 +1385,7 @@ var review = [], wholeReview = [];
     //console.log("nodePos :"+nodePos);
     //Display Finish Button
     if (nodePos == (nodeLen - 1)) {
-      $('.finishPara').css({ 'display': 'block' });
+      // $('.finishPara').css({ 'display': 'block' });
         // $('.nav-next').css({ "display": "none" });
       }
     }
@@ -1483,7 +1508,12 @@ var review = [], wholeReview = [];
 
     function showReview() {
       reviewQn = true;
-      populateQuestion(0);
+      if(currentPostQn == null) {
+        currentPostQn = 0
+      }
+      populateQuestion(currentPostQn);
+      console.log('currentPostQn ', currentPostQn)
+      currentPostQn++
       scormAdaptor_setreview(null)
       $('.finishPara').hide();
     }
@@ -1491,26 +1521,36 @@ var review = [], wholeReview = [];
     /*------------- Popup box Post Test Operations ---------------------*/
 
     function showFinalScore() {
+      $('#menu-ul li.selected').addClass('completed')
+      $('#menu-ul li.selected').find('.ani-progress').animate({'width':'100%'},400)
+      $('#menu-ul li.selected').find('span').animate({'left':'86%'},400).text('100%');
+      $('#menu-ul li.completed').removeClass('selected');
+
+      $('#menu-sidebar2 .progress-wrapper-main').find('.selected').parent().addClass('completed');
+      $('#menu-sidebar2 .progress-wrapper-main').find('.selected').addClass('completed');
+      $('#menu-sidebar2 .progress-wrapper-main').find('.selected').next().css('display','block');
+      $('#menu-sidebar2 .progress-wrapper-main').find('.selected').next().find('.progress-bar').css('left','100%').text('100%');
+      $('#menu-sidebar2 .progress-wrapper-main').find('.selected').removeClass('selected')
 
       var score = postQnAnsObj.totalScore;
       var outOf = postQnAnsObj.totalQn;
-
+      var optionsStr = '';
       /*******************Sumanth Added below code*******************/
       var _percent = score / outOf * 100;
 
-      swal({
-        title: "You have now completed the module and final score is " + score + "/" + outOf, 
-        text: "",
-        type: "",
-        showCancelButton: false,
-        confirmButtonClass: "btn-danger",
-        confirmButtonText: "OK",
-        cancelButtonText: "No",
-        closeOnConfirm: true,
-        closeOnCancel: false
-      },
-      function (isConfirm) {
-        if (isConfirm) {
+      // swal({
+      //   title: "You have now completed the module and final score is " + score + "/" + outOf, 
+      //   text: "",
+      //   type: "",
+      //   showCancelButton: false,
+      //   confirmButtonClass: "btn-danger",
+      //   confirmButtonText: "OK",
+      //   cancelButtonText: "No",
+      //   closeOnConfirm: true,
+      //   closeOnCancel: false
+      // },
+      // function (isConfirm) {
+      //   if (isConfirm) {
           var score = postQnAnsObj.totalScore;
           var outOf = postQnAnsObj.totalQn;
           console.log('Total answered ' + postQnAnsObj.totalScore + ' Out of '+ outOf)
@@ -1528,46 +1568,57 @@ var review = [], wholeReview = [];
 					//alert(_percent)
 					//scormAdaptor_commit(); 
 				}
-          var answers = scormAdaptor_getRecalreview();
-          
-          var result='', rational='', multi ='', crct='';
-          for(var i=0;i<postQuizData.questions.length;i++) {
-            if(postQuizData.questions[i].correct.length >1) {
-              for(var j=0;j<postQuizData.questions[i].correct.length;j++) {
-                multi += postQuizData.questions[i].choices[postQuizData.questions[i].correct[j]] +'<br/>'
-                crct += postQuizData.questions[i].choices[answers[i][j]] +'<br/>'
-              }
-              result += '<p><strong>Question:</strong><br/>'+postQuizData.questions[i].question+'</p><p><strong>Your Answer:</strong><br/>'+crct+'</p><p><strong>Correct Answer:</strong><br/>'+multi+'</p><p><strong>Rational:</strong><br/>'+postQuizData.questions[i].rational+'</p><br/>';
+
+        var answers = scormAdaptor_getRecalreview();
+        console.log(answers)
+
+        $('.post-test-quiz').find('.form').empty();
+        var id, question = '', options = '', qnStr ='', rational ='', ans='';
+        for(var i=0;i<postQuizData.questions.length;i++) {
+          id = postQuizData.questions[i].id;
+          question = postQuizData.questions[i].question;
+          options = postQuizData.questions[i].choices;
+          var optionsStr='', icon='';
+          if(postQuizData.questions[i].multi) {
+            $.each(options, function(key, value) {
+              optionsStr += '<label class="radio" id="qn_'+i+key+'">' + value + icon+'</label>';
+              });
             } else {
-              crct = postQuizData.questions[i].choices[answers[i]] +'<br/>'
-              result += '<p><strong>Question:</strong><br/>'+postQuizData.questions[i].question+'</p><p><strong>Your Answer:</strong><br/>'+crct+'</p><p><strong>Correct Answer:</strong><br/>'+postQuizData.questions[i].choices[postQuizData.questions[i].correct]+'</p><p><strong>Rational:</strong><br/>'+postQuizData.questions[i].rational+'</p><br/>';
-            }
+              $.each(options, function(key, value) {
+                optionsStr += '<label class="radio" id="qn_'+i+key+'">' + value + '</label>';
+            });
           }
-          $('.post-test-quiz .qn-block, .finishPara').remove()
-        $('.post-test-quiz #resultBlock').html(result + '<input type="submit" value="Finish" onclick="handleWindowClose()" class="finishTest"/>');
-        $('.post-test-quiz #resultBlock').show()
-        
 
-				/*******************Sumanth code ends here *******************/
+        qnStr = '<label class="control-label">' + question + '</label>';
+        if(postQuizData.questions[i].multi) {
+          for(var j=0;j<postQuizData.questions[i].correct.length;j++) {
+            ans += '<li>'+postQuizData.questions[i].choices[postQuizData.questions[i].correct[j]] +'</li>';
+          }
+        } else {
+          ans = postQuizData.questions[i].choices[postQuizData.questions[i].correct];
+        }
 
+        rational = '<p><strong>Rational:</strong> '+postQuizData.questions[i].rational+'</p>'
+        $('.post-test-quiz .form').append('<div class="qn-block">'+qnStr + optionsStr+ '</div>' +'<div class="resultBlock" style="display:block"><div><strong>Answer:</strong> <ul>'+ans+'</ul> </div>' + rational+'</div>');
+        $('.post-test-quiz .form').addClass('final-score');
+        if(postQuizData.questions[i].multi) {
+            for(var j=0;j<answers[i].length;j++) {
+              $('.post-test-quiz .qn-block #qn_'+i+answers[i][j]).append('<span class="glyphicon glyphicon-remove incorrectMsg"></span>')
+            }
           
+            for(var j=0;j<postQuizData.questions[i].correct.length;j++) {
+                $('.post-test-quiz .qn-block #qn_'+i+postQuizData.questions[i].correct[j]).find('span').removeClass('incorrectMsg glyphicon-remove').addClass('glyphicon-ok correctMsg');
+            }
+        } else {
+            $('.post-test-quiz .qn-block #qn_'+i+answers[i]).append('<span class="glyphicon glyphicon-remove incorrectMsg"></span>')
+            $('.post-test-quiz .qn-block #qn_'+i+postQuizData.questions[i].correct).find('span').removeClass('incorrectMsg glyphicon-remove').addClass('glyphicon-ok correctMsg');
+        }
 
+      }
+         
 				postQnAnsObj.completedTest = true;
-				swal.close();
-
-        $('html, body').animate({
-            scrollTop: $('#rowcontent').offset().top
-          }, 500)
-
         console.log('Total scored in %', scormAdaptor_getscore('_score'))
 
-				// var msgStr = '<div class="postTstPopUp"><h1>You have Scored '+score+"/"+outOf+'</h1></div>';
-				// popup(msgStr);
-      } else {
-
-                //swal("Cancelled", "Your imaginary file is safe :)", "error");
-              }
-            });
     }
 function handleWindowClose() {
   window.close();

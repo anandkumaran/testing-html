@@ -97,8 +97,7 @@ function populateMenuBottom(data){
         var wrap = document.createElement('div');
         var topicIcon = document.createElement('div');
         var topicLabel = document.createElement('div');
-        var img = document.createElement('img');
-        var img1 = document.createElement('img');
+        var icon = document.createElement('span');
         var progress = document.createElement('div');
         var progressBar = document.createElement('div');
 
@@ -107,11 +106,7 @@ function populateMenuBottom(data){
         topicIcon.className = 'progress-icon';
         topicIcon.id = node.module.replace(/ /g,"_") + '_icon';
 
-        img.src = 'images/Btn0005.png';
-        img.className = 'progress-icon-state1';
-
-        img1.src = 'images/Btn0003.png';
-        img1.className = 'progress-icon-state2';
+        icon.className = 'progress-icon-state1 glyphicon glyphicon-play';
 
         if(i == 0){
             topicLabel.className = "progress-label selected";
@@ -136,11 +131,9 @@ function populateMenuBottom(data){
         progressBar.setAttribute('aria-valuenow', 0);
         progressBar.setAttribute('aria-valuemin', 0);
         progressBar.setAttribute('aria-valuemax', 100);
-        progressBar.setAttribute('style', 'width: 0%');
-        progressBar.innerHTML = '0%'
+        progressBar.setAttribute('style', 'left: 0%');
 
-        topicIcon.appendChild(img)
-        topicIcon.appendChild(img1)
+        topicIcon.appendChild(icon)
         wrap.appendChild(topicIcon);
         wrap.appendChild(topicLabel);
         progress.appendChild(progressBar)
@@ -230,21 +223,11 @@ function prepareList() {
         var parentNode = null;
         for(var i=0;i<visitedPage.length;i++) {
             if(visitedPage[i] != event.target.firstChild.textContent && visitedPage[i]!='Post-test' && visitedPage[i] !='Pre-test') {
-            //     console.log('if pop', event.target.firstChild.textContent)
-            //     var ind = visitedPage.indexOf(event.target.firstChild.textContent)
-            //     if(ind >-1) {
-            //         visitedPage.splice(ind, 1)
-            //     }
-            // } else {
                 str = visitedPage[i].replace(/ /g,"_");
                 $('#'+str+'_span').parent().addClass('completed');
                 $('#menu-ul').find('li.completed').removeClass('selected');
                 $('#'+str+'_ani').animate({'width': '100%'}, 500);
-                $('#'+str+'_span').css('left','86%').text('100%');
-
-                $('#' + str).css('width','100%');  
-                $('#' + str).html('100%');
-                $('#' + str + '_icon').removeClass("progress-icon").addClass("progress-icon button-open2");
+                $('#'+str+'_span').animate({'left':'86%'}, 500).text('100%');
             }
         }
         
@@ -320,29 +303,21 @@ function prepareList() {
      });
 
      var $li = $(document).on('click', '#menu-sidebar2 .progress-label', function(event){
-        console.log(event)
+        $('.menu-wrap2').removeClass('menu-show2');
+        $('.toggle-button2').removeClass('button-open2');
         event.stopPropagation();
         postTestStart = false;
         var parentNode = null;
         for(var i=0;i<visitedPage.length;i++) {
             if(visitedPage[i] != event.target.firstChild.textContent && visitedPage[i]!='Post-test' && visitedPage[i] !='Pre-test') {
-            //     console.log('if pop', event.target.firstChild.textContent)
-            //     var ind = visitedPage.indexOf(event.target.firstChild.textContent)
-            //     if(ind >-1) {
-            //         visitedPage.splice(ind, 1)
-            //     }
-            // } else {
                 str = visitedPage[i].replace(/ /g,"_");
-                // $('#'+str+'_span').parent().addClass('completed');
-                // $('#'+str+'_ani').animate({'width': '100%'}, 500);
-                // $('#'+str+'_span').css('left','86%').text('100%');
-
                 $('#'+str+'_icon').next().addClass('completed');
+                $('#'+str+'_icon').parent().addClass('completed');
                 $('#'+str+'_icon').next().removeClass('selected');
-                $('#' + str).css('width','100%');  
-                $('#' + str).html('100%');
-                $('#' + str + '_icon').removeClass("progress-icon").addClass("progress-icon button-open2");
+                $('#' + str).parent().show();
+                $('#' + str).animate({'left':'100%'}, 700).text('100%');
 
+                $('#' + str + '_icon').removeClass("progress-icon").addClass("progress-icon button-open2");
             }
         }
         

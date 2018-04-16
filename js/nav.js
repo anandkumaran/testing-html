@@ -63,12 +63,13 @@ function handleNavigation(direction) {
             $('#'+cur+'_span').parent().removeClass('selected')
             $('#'+cur+'_span').parent().addClass('completed');
             $('#'+cur+'_ani').animate({'width': '100%'}, 500);
-            $('#'+cur+'_span').css('left','86%').text('100%');
+            $('#'+cur+'_span').animate({'left':'86%'}).text('100%');
             $('#'+cur+'_icon').next().addClass('completed');
             $('#'+cur+'_icon').next().removeClass('selected');
-            $('#' + cur).css('width','100%');  
-            $('#' + cur).html('100%');
+            $('#' + cur).animate({'left':'100%'}, 500).text('100%');  
+            $('#' + cur).parent().show();
             $('#' + cur + '_icon').addClass("button-open2");
+            $('#' + cur + '_icon').parent().addClass('completed');
             $('#' + cur + '_icon').parent().next().find('.progress-label').addClass('selected');
         } else {
             cur = currentModuleName.replace(/ /g,"_");
@@ -98,6 +99,9 @@ function handleNavigation(direction) {
 var firstTime = true;
 
 function handlePostTestNavigation(direction) {
+    if(reviewQn) {
+        clearTimeout(clearTime);
+    }
     /*console.log("Loading question "+ currentPostQn);
     console.log("Json Length "+ postQuizData.questions.length);*/
     if (!direction) {
@@ -130,17 +134,47 @@ function handlePostTestNavigation(direction) {
                 swal("Please click Submit button");
             }
             return;
+        } else {
+            $('.nav-pre, .nav-next').hide();
         }
+        
+        if (currentPostQn == null ) {
+            $('.nav-next').css({ "display": "none" });
+            swal({
+                  title: "You have completed your Post-Test", 
+                  text: "Do you want to continue press Submit \n Do you want to review your answers press Review",
+                  type: "",
+                  showCancelButton: true,
+                  confirmButtonClass: "btn-danger",
+                  confirmButtonText: "Submit",
+                  cancelButtonText: "Review",
+                  closeOnConfirm: true,
+                  closeOnCancel: false
+                },
+                function (isConfirm) {
+                  if (isConfirm) {
+                    showFinalScore();
+                    swal.close();
+                } else {
+                  swal.close();
+                  showReview();
+                }
+              });
+            return false
+        }
+
         $(".content").css({ 'opacity': '0' });
+
         $(".content").load('screens/postQzTemplate.html', function(responseTxt, statusTxt, xhr) {
             if (statusTxt == "success") {
                 $(this).find('.qn-block').empty();
                 populateQuestion(currentPostQn);
                 postTstQnDone = false;
                 if (currentPostQn == (postQuizData.questions.length - 1)) {
-                    $('.nav-next').css({ "display": "none" });
+                    
                     //This will end loading questions
                     currentPostQn = null;
+                
                 } else {
                     currentPostQn++;
 					$(".main-content").scrollTop(0);
@@ -230,7 +264,7 @@ function populateQuestion(qn) {
         }
     }
     if($('.post-test-quiz .qn-block').attr('data-id') == postQuizData.questions.length -1 && reviewQn) {
-      $('.finishPara').show();
+      $('.finishPara').hide();
     }
 
     //Display question number against total questions in the bottom 
@@ -342,9 +376,16 @@ function navigateToIndex(obj) {
 
                 var source = document.createElement('source');
                 source.type = 'video/mp4';
+                source.media = 'all and (min-width: 481px)';
                 source.src = obj.video_url;
 
+                var source1 = document.createElement('source');
+                source1.type = 'video/mp4';
+                source1.media = 'all and (max-width: 480px)';
+                source1.src = obj.video_url_small;
+
                 video.appendChild(source);
+                video.appendChild(source1);
 
                 var content = document.createElement('div');
                 content.className = 'overlay-content';

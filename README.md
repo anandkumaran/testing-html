@@ -10,3 +10,6 @@ Changelog
 
 16-04 - video overlay
 - Updated menu.json
+
+17-04 
+- Icon changed for Mobile toc button on nav.html line #17

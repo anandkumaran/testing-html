@@ -1,4 +1,8 @@
 @media all and (max-width: 1024px) and (orientation:landscape) {
+    .overlay-wrap .overlay-parent {
+        top: 9%;
+        width: 92%;
+    }
     .wrapper {
         width: 100%;
     }
@@ -28,6 +32,10 @@
 }
 
 @media all and (max-width: 1024px) and (orientation:portrait){
+    .overlay-wrap .overlay-parent {
+        top: 20%;
+        width: 92%;
+    }
 	.contentCustom{
 		/* margin-top:80px; */
 		margin-top:20%;
@@ -69,8 +77,35 @@
 }
 
 @media all and (max-width: 768px) and (orientation:portrait) {
+    .overlay-wrap .overlay-parent {
+        top: 0;
+        width: 84%;
+    }
+}
+
+@media all and (max-width: 768px) and (orientation:portrait) {
+    .content-right-panel {
+        margin-top: 0;
+    }
+    .intro_module {
+        padding-top: 10px;
+    }
+
+    .content-right-panel h1 {
+        margin-top: 10px;
+    }
+    .pre-test .form .radio {
+        padding: 10px;
+    }
+    .content {
+        padding-bottom: 0;
+    }
+    .mobile-disable {
+        height: 0 !important;
+    }
     .intro-image {
-        height: 84vh;
+        min-height: 430px;
+        height: 80vh;
     }
     .timeoutln h3 {
         padding-top: 2%;
@@ -88,16 +123,13 @@
         padding-right: 2px;
     }
     .menu-bar .icon {
-        display: block;
+        display: none;
         color: #ffffff;
         height: 100%;
     }
     .menu-bar .icon .glyphicon {
         top: 14px;
         font-size: 19pt;
-    }
-    .menu-bar .headline {
-        width: 82% !important;
     }
     .menu-bar .headline p {
         width: 100%;
@@ -123,8 +155,9 @@
         width: 50%;
         text-align: center;
     }
-    .content-right-panel {
+    .main-content {
         /*  height: 89%; */
+        margin-top: 55px;
     }
     .navigation {
         position: fixed;
@@ -153,7 +186,6 @@
         height: 100%;
     }
 }
-
 @media all and (min-width: 480px) and (max-width: 767px) {
     .creditLine {
         /*     color: #ffffff;
@@ -257,8 +289,14 @@
 	 .navigation .nav-middle { width:100%; } 
 	 .nav-left { position:absolute; left:15px; z-index:10000; }
 	 .nav-right { position:absolute; right:15px; z-index:10000; }
-	 .progress-label { width:100%; }
-	 .progress { width:100%; } 
+	 
+	 /*.progress { width:100%; } */
+     .toggle-button2 {
+        left: 41%;
+    }
+    .menu-bar .headline {
+        width: 100%;
+    }
 }
 
 @media all and (min-width: 991px) {
@@ -320,6 +358,14 @@
 }
 
 @media all and (max-width: 480px) and (orientation:portrait) {
+    .overlay-wrap .overlay-parent {
+        top: 31%;
+        width: 92%;
+    }
+    .toggle-button2 {
+        left: 38%;
+        transform: translateX(38%);
+    }
     html,
     body {
         font-size: 12pt;
@@ -478,8 +524,8 @@
 	 .navigation .nav-middle { width:100%; } 
 	 .nav-left { position:absolute; left:15px; z-index:10000; }
 	 .nav-right { position:absolute; right:15px; z-index:10000; }
-	 .progress-label { width:100%; }
-	 .progress { width:100%; }
+	 
+	 /*.progress { width:100%; }*/
 }
 
 @media all and (max-width: 320px) and (orientation:portrait) {
@@ -529,8 +575,7 @@
 	 .navigation .nav-middle { width:100%; } 
 	 .nav-left { position:absolute; left:15px; z-index:10000; }
 	 .nav-right { position:absolute; right:15px; z-index:10000; }
-	 .progress-label { width:100%; }
-	 .progress { width:100%; }
+	 /*.progress { width:100%; }*/
 	
 }
 
@@ -634,12 +679,12 @@
 	}
 	 .nav-next{font-size: 17px !important;}  /* added */
 	 .menu-bar .icon { float:right; width:40px; padding:0px; }
-	 .menu-wrap2 { width:90%; } 
+	 .menu-wrap2 { width:94%; } 
 	 .navigation .nav-middle { width:100%; } 
 	 .nav-left { position:absolute; left:15px; z-index:10000; }
 	 .nav-right { position:absolute; right:15px; z-index:10000; }
-	 .progress-label { width:100%; }
-	 .progress { width:100%; }
+	 
+	 /*.progress { width:100%; }*/
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
