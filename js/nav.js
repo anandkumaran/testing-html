@@ -274,7 +274,6 @@ var previousTopicIndex = null;
 var previousUrl = null;
 
 function navigateToIndex(obj) {
-
     //resetting navigation & postTest flags
     navigationFlag = false;
     postTestStart = false;
@@ -324,6 +323,45 @@ function navigateToIndex(obj) {
                 if (statusTxt == "error")
                     alert("Error: " + xhr.status + ": " + xhr.statusText);
             }).animate({ opacity: '1' });
+
+            if(obj.overlay_avail) {
+                var wrap = document.createElement('div');
+                wrap.className = 'overlay-wrap';
+
+                var parent = document.createElement('div');
+                parent.className = 'overlay-parent';
+
+                var close = document.createElement('span');
+                close.className = 'overlay-close';
+                close.appendChild(document.createTextNode('x'));
+
+                var video = document.createElement('video');
+                video.id = currentModuleName.replace(/ /g,"_")+'_vid';
+                video.controls = true;
+                video.style.width = '100%';
+
+                var source = document.createElement('source');
+                source.type = 'video/mp4';
+                source.src = obj.video_url;
+
+                video.appendChild(source);
+
+                var content = document.createElement('div');
+                content.className = 'overlay-content';
+                content.appendChild(video);
+
+                parent.appendChild(close);
+                parent.appendChild(content);
+                wrap.appendChild(parent);
+
+                var videoId = currentModuleName.replace(/ /g,"_")+'_vid';
+
+                $('body').append(wrap);
+
+                document.getElementById(videoId).play();
+            } else {
+                $('.overlay-wrap').remove();
+            }
         }
     }
 
@@ -350,6 +388,10 @@ function navigateToIndex(obj) {
     }
     /************************Code Ended by Sumanth**************************/
 }
+
+$(document).on('click', '.overlay-wrap .overlay-close', function() {
+    $('.overlay-wrap').remove();
+});
 
 function showHideNavButtons(index) {
     var len = getMenuLength();

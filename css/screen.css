@@ -685,5 +685,35 @@ vertical-align:middle;
  .progress { margin-top:5px; }
 }
 
+.overlay-wrap {
+	background: rgba(0,0,0,0.8);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99999;
+}
 
+.overlay-wrap .overlay-parent {
+	position: relative;
+	margin: 5% auto 0;
+	height: 84%;
+	width: 75%;
+}
 
+.overlay-wrap .overlay-parent .overlay-close {
+	background: #fff;
+	border-radius: 50%;
+	color: #333;
+	cursor: pointer;
+	font-family: Arial, sans serf;
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	text-align: center;
+	width: 30px;
+	z-index: 999999;
+}

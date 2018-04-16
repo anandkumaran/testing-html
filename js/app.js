@@ -379,6 +379,8 @@ window.onload = function () {
     var currentModuleName = str;
     var page_url = null;
     var header_id = null;
+    var overlay_avail = false;
+    var video_url = '';
 
 
     var len = getMenuLength();
@@ -388,6 +390,9 @@ window.onload = function () {
             // first check if name it self is a module
             if (menuData.modules[i].module === str) {
               module_index = menuData.modules[i].id;
+              overlay_avail = menuData.modules[i].overlay;
+              video_url = menuData.modules[i].video_url;
+
               if (menuData.modules[i].url) page_url = menuData.modules[i].url;
               break;
             } else {
@@ -470,6 +475,8 @@ window.onload = function () {
                 indexObj.page_url = page_url;
                 indexObj.currentModuleName = currentModuleName;
                 indexObj.header_id = header_id;
+                indexObj.overlay_avail = overlay_avail;
+                indexObj.video_url = video_url;
 
                 return indexObj;
               }

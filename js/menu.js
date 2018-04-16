@@ -225,7 +225,6 @@ function prepareList() {
     .children('ul').hide();
 
      var $li = $('#menu-ul').find('li').on('click', function(event){
-        console.log(event)
         event.stopPropagation();
         postTestStart = false;
         var parentNode = null;

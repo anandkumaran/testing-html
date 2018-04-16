@@ -7,3 +7,6 @@ Changelog
 - Added Review button on postQzTemplate.html
 - Added script modify on pretest.html, postTes.html, nav.html,
 - Added id "#menu-sidebar2" for '.menu-sidebar2' on nav.html
+
+16-04 - video overlay
+- Updated menu.json
