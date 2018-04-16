@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="MANIFEST01" version="1.2" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+<metadata>
+<schema>ADL SCORM</schema>
+<schemaversion>1.2</schemaversion>
+</metadata>
+<organizations default="lo_0001">
+<organization identifier="lo_0001" structure="hierarchical">
+<title>Fire Safety</title>
+<item identifier="Page1" identifierref="Page1Res" isvisible="true">
+<title>Fire Safety</title>
+<!--<adlcp:masteryscore>80</adlcp:masteryscore>-->
+</item>
+</organization>
+</organizations>
+<resources>
+<resource identifier="Page1Res" adlcp:scormtype="sco" href="index.html" type="webcontent" />
+
+<file href="css/fonts/glyphicons-halflings-regular.eot" />
+<file href="css/fonts/PT_Serif-Web-Bold.eot" />
+<file href="css/fonts/PT_Serif-Web-Regular.eot" />
+<file href="css/fonts/glyphicons-halflings-regular.svg" />
+<file href="css/fonts/glyphicons-halflings-regular.ttf" />
+<file href="css/fonts/glyphicons-halflings-regular.woff" />
+<file href="css/fonts/PT_Serif-Web-Regular.woff" />
+<file href="css/fonts/glyphicons-halflings-regular.woff2" />
+<file href="css/libs/bootstrap.min.css" />
+<file href="css/libs/sweetalert.css" />
+<file href="css/framework.css" />
+<file href="css/media.css" />
+<file href="css/screen.css" />
+<file href="data/citation.json" />
+<file href="data/menu.json" />
+<file href="data/post-test.json" />
+<file href="data/pretest.json" />
+<file href="fonts/glyphicons-halflings-regular.eot" />
+<file href="fonts/PT_Serif-Web-Bold.eot" />
+<file href="fonts/PT_Serif-Web-Regular.eot" />
+<file href="fonts/OpenSans-Semibold.eot" />
+<file href="fonts/glyphicons-halflings-regular.svg" />
+<file href="fonts/glyphicons-halflings-regular.ttf" />
+<file href="fonts/PT_Serif-Web-Bold.ttf" />
+<file href="fonts/PT_Serif-Web-BoldItalic.ttf" />
+<file href="fonts/OpenSans-ExtraBold.ttf" />
+<file href="fonts/OpenSans-ExtraBoldItalic.ttf" />
+<file href="fonts/OpenSans-Italic.ttf" />
+<file href="fonts/OpenSans-Light.ttf" />
+<file href="fonts/OpenSans-LightItalic.ttf" />
+<file href="fonts/PT_Serif-Web-Regular.ttf" />
+<file href="fonts/OpenSans-Semibold.ttf" />
+<file href="fonts/OpenSans-SemiboldItalic.ttf" />
+<file href="fonts/Roboto-Bold.ttf" />
+<file href="fonts/Roboto-Light.ttf" />
+<file href="fonts/Roboto-Regular.ttf" />
+<file href="fonts/RobotoSlab-Thin.ttf" />
+<file href="fonts/Apache License.txt" />
+<file href="fonts/glyphicons-halflings-regular.woff" />
+<file href="fonts/PT_Serif-Web-Bold.woff" />
+<file href="fonts/OpenSans-ExtraBold.woff" />
+<file href="fonts/PT_Serif-Web-Regular.woff" />
+<file href="fonts/OpenSans-Semibold.woff" />
+<file href="fonts/glyphicons-halflings-regular.woff2" />
+<file href="images/ns_v27_n34_7460_0001.jpg" />
+<file href="images/ns_v27_n34_7460_0002.jpg" />
+<file href="images/ns_v27_n34_7460_0003.jpg" />
+<file href="images/panel1.jpg" />
+<file href="images/table1.jpg" />
+<file href="images/table2.jpg" />
+<file href="images/table3.jpg" />
+<file href="images/Dart.png" />
+<file href="images/minus.png" />
+<file href="images/panel2.png" />
+<file href="images/panel1.png" />
+<file href="images/plus.png" />
+<file href="images/timeout.png" />
+<file href="js/libs/bootstrap.min.js" />
+<file href="js/libs/detect-zoom.min.js" />
+<file href="js/libs/jquery.min.js" />
+<file href="js/libs/sweetalert.min.js" />
+<file href="js/app.js" />
+<file href="js/default.js" />
+<file href="js/menu.js" />
+<file href="js/nav.js" />
+<file href="screens/welcome.html" />
+<file href="screens/summary.html" />
+<file href="js/scorm_adaptor.js" />
+<file href="screens/acronyms.html" />
+<file href="screens/glossary.html" />
+<file href="screens/intro.html" />
+<file href="screens/menu.html" />
+<file href="screens/nav.html" />
+<file href="screens/postQzTemplate.html" />
+<file href="screens/postTest.html" />
+<file href="screens/pretest.html" />
+<file href="screens/references.html" />
+<file href="screens/references1.html" />
+<file href="screens/references2.html" />
+<file href="screens/references3.html" />
+<file href="screens/references4.html" />
+<file href="screens/learning-module/01_aims.html" />
+<file href="screens/learning-module/02_introduction.html" />
+<file href="screens/learning-module/03_being_compassionate_with_self.html" />
+<file href="screens/learning-module/04_being_compassionate_with_colleagues.html" />
+<file href="screens/learning-module/05_conclusions.html" />
+<file href="screens/learning-module/Table-1.html" />
+<file href="screens/learning-module/Table-2.html" />
+<file href="screens/learning-module/Table-3.html" />
+</resources>
+</manifest>
+

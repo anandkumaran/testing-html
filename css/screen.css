@@ -1,0 +1,689 @@
+/* intro screen css   */
+.intro{
+	/* height: 100%; */
+}
+
+.intro-left{
+	padding: 12px 0px;
+}
+.intro-left img{
+	margin:0 auto;
+}
+.intro-left-img span{
+	color: #000;
+    position: absolute;
+    top: 16px;
+    width: 50%;
+    left: 25%;
+    line-height: 100%;
+    text-align: center;
+    font-size: 14pt;
+}
+.intro-right{
+	/* height: 100%; */
+}
+.intro_module{
+	/*padding: 10px 0 0px 10px;*/
+}
+.intro .tooltip-inner {
+    background-color: #FFFFFF;
+    color: #1F6791;
+    font-weight: bold;
+    min-width: 100px;
+    margin-top: 0px;
+    z-index: 999999;
+    position: absolute;
+    border: 1px solid #1F6791;
+    margin-left: -50px;
+}
+
+.intro .tooltip.top .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-color: #F5F4F2 !important; /* black */
+  border-width: 0 5px 5px;
+}
+
+
+/* .padding-top10{
+	padding-top: 10px;
+} */
+
+
+
+.padding-top10{
+	padding-top: 0px;
+    border: #005184;
+    border-style: solid;
+}
+
+
+
+
+
+
+
+
+
+/*..*************************************  pre-test screen css Starts ******************************************.. */
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+	
+	.pre-test h1{
+		text-align: center;
+		font-size: 25pt;
+		font-weight: normal;
+		padding: 5% 0;
+	}
+
+	.pre-test .form{
+		width: 100%;
+	}
+	.pre-test .form .qn-block{
+		display: none;
+		width: 94%;
+        margin: 20px auto;
+	}
+	.pre-test .form .qn-block:first-child {
+		display: block;
+	}
+	.pre-test .form .control-label{
+		font-size: 16px;
+		text-indent: -3%;
+		width: 100%;
+		font-family: "PT_Serif-Web-Bold";
+		
+	}
+	.pre-test .form .radio{
+		margin-left: -8px;
+		color: #7F6A7F;
+		font-family: "PT_Serif-Web-Regular";
+		font-size: 15px;
+		margin-top: 1px;
+        margin-bottom: 12px;
+border: .5px solid #ccc;
+cursor: pointer;
+
+padding: 15px;
+padding-left: 30px
+	}
+.pre-test .form .radio.disable {
+	cursor: not-allowed;
+}
+	.pre-test .form .radio input[type=radio], .radio-inline input[type=radio] {
+	    position: absolute;
+	    display: none;
+	    margin-left: -25px;
+	    width: 17px;
+	    height: 17px;
+   }
+   .pre-test .submitPara{
+   	  text-align: center !important;
+   	  margin-bottom: 5%;
+	    font-family: "PT_Serif-Web-Regular";
+   }
+
+   .pre-test .submitAns{
+	   	background-color: #42A0E7;
+	    color: #fff;
+	    padding: 5px 20px;
+	    border-radius: 2px;
+	    border: 0;
+		font-family: "PT_Serif-Web-Bold";
+		display: none;
+   }
+   .pre-test .submitAns:hover{
+   		border:0;
+   }
+   .pre-test .submitAns:focus{
+   		outline: 0;
+   }
+
+   .pre-test .form .qn-block .msgSpan{
+   		display: none;
+   }
+   .pre-test .correctMsg{
+   		color: #00B098;
+   		padding-left: 20px
+   }
+   .pre-test .incorrectMsg{
+   		color: #9A054A;
+   		padding-left: 20px;
+   }
+
+   .pre-test .popupInfo{
+   		width: 50%;
+	    height: 150px;
+	    position: absolute;
+	    left: 25%;
+	    top: 30%;
+	    background-color: #fff;
+	    box-shadow: 0px 5px 0px #D4D2CF;
+	    -moz-box-shadow: 0px 5px 0px #D4D2CF;
+	    -webkit-box-shadow: 0px 5px 0px #D4D2CF;
+	    -ms-box-shadow: 0px 5px 0px #D4D2CF;
+	    display: none;
+   }
+   .pre-test .popupInfo .pretest-msg{
+   		color: #000;
+	    width: 95%;
+	    text-align: center;
+	    margin: 0 auto;
+	    font-weight: bold;
+	    font-size: 18px;
+	    padding: 28px 14px;
+   }
+
+    .pre-test .popupInfo .pretest-score{
+   		color: #34A490;
+	    width: 95%;
+	    text-align: center;
+	    margin: 0 auto;
+	    font-weight: bold;
+	    font-size: 18px;
+   }
+
+/*..*************************************  pre-test screen css ends ******************************************.. */
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*..........................  Post-test Questionaire Starts.......................... ............................  */
+/*..........................  *****************************...................................................... */
+
+.post-test{
+		display: block;
+	}
+	.post-test .info{
+		width: 88%;
+	    border: 1px solid #E2E0DD;
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 17%;
+	}
+
+	.post-test .info p{
+		font-family: "OpenSans-Semibold";
+		font-size: 23px; /* fallback size */
+	    padding: 3% 5%;
+	    text-align: center;
+	    line-height: 28pt;
+	}
+
+	.post-test .info h1{
+		font-family: "PT_Serif-Web-Bold";
+	    color: #005282;
+	    font-size: 1.5em;
+	    text-align: center;
+	    margin-top: -31px;
+	    background-color: #F5F4F2;
+	    width: 50%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+
+	.post-test .proceed p{
+		color: #F4F2F3;
+	    text-align: center;
+	    font-family: "PT_Serif-Web-Bold";
+	    font-size: 18px; /* backup Text */
+	    /* font-size: 1.5vw; */
+	    padding: 5px;
+	    width: 100px;
+	    text-align: center;
+	    margin: 5% auto 0 auto;
+	    background-color: #42A0E7;
+	    border-radius: 2px;
+	    cursor: pointer;
+
+	}
+
+.post-test-quiz{
+	background-color: #ffffff;
+	/* height: 94%; */ /* updated */
+	width: 100%;
+	margin-top: 1%;
+ 	min-height: 100vh;   /* changed   */
+}
+.post-test-quiz .form{
+		width: 100%;
+		padding: 1%;
+	}
+.post-test-quiz .form .qn-block{
+	width: 100%;
+    margin: 20px auto;
+}
+.post-test-quiz .form .control-label{
+	margin-bottom: 20px;
+    text-indent: -15px;
+    margin-left: 20px;
+	font-family: "PT_Serif-Web-Bold";
+}
+.post-test-quiz .form .radio{
+	margin-left: 5px;
+    color: #7F6A7F;
+    /* border: 1px solid black;
+	width: 220px; */
+	    font-size: 15px;
+    margin-top: 1px;
+    margin-bottom: 17px;
+    text-indent: 0%;
+	font-family: "PT_Serif-Web-Regular";
+	   /*  display: flex; 
+    text-indent: -18px;*/
+	background: #fff;
+border: 1px solid #ccc;
+padding: 20px;
+padding-left: 40px;
+cursor: pointer;
+}
+
+.post-test-quiz .form .radio input[type=radio], .radio-inline input[type=radio] {
+    position: absolute;
+    margin-left: -25px;
+    width: 17px;
+    height: 19px;
+    visibility: hidden;
+}
+.post-test-quiz .form .radio input {
+	visibility: hidden;
+}
+.post-test-quiz .form .radio.disable {
+	border-color: #ccc;
+	cursor: not-allowed;
+}
+.post-test-quiz .form .radio.checked {
+	border-color: #aaa;
+	background: #ccc;
+}
+
+.post-test-quiz input[type=checkbox], input[type=radio] {
+    margin: 3.5px 0 0;
+}
+
+.post-test-quiz .submitPara{
+   	  text-align: center !important;
+   	  margin-top: 5%;
+   }
+
+.post-test-quiz .submitAns{
+		background-color: #42A0E7;
+   	color: #fff;
+   	padding: 5px;
+   	border-radius: 2px;
+   	border: 0;
+   	font-size: 15pt;
+   	width: 100px;
+	font-family: "PT_Serif-Web-Bold";
+}
+.post-test-quiz .submitAns:hover{
+		
+		padding: 5px;
+		border:0;
+}
+.post-test-quiz .submitAns:focus{
+		border:0;
+}
+.post-test-quiz .resultBlock {
+	width: 95%;
+	min-height: 150px;
+	overflow-y: auto;
+	margin: 1% auto 1%;
+	display: none;
+	padding: 1%;
+}
+
+.post-test-quiz .correctMsg{
+	color: #00B098;
+	font-size: 1em;
+	left: 4%;
+	margin-top: -2px;
+	padding-left: 14px;
+}
+.post-test-quiz .incorrectMsg{
+	color: #9A054A;
+	font-size: 1em;
+	left: 4%;
+	margin-top: -2px;
+	padding-left: 14px;
+}
+
+.post-test-quiz .resultBlock .ansPara{
+	text-align: left !important;
+	color: #7F6A7F;
+
+	font-size: 12pt;
+	 font-family: 'PT_Serif-Web-Bold';
+}
+.post-test-quiz .resultBlock .ansTxt{
+	color: #000;
+	 font-family: 'PT_Serif-Web-Bold';
+}
+
+.post-test-quiz .resultBlock .rationalTxt{
+	color: #000;
+
+}
+
+.post-test-quiz .resultBlock .expPara{
+	color: #7F6A7F;
+	text-align: left !important;
+	 font-family: 'PT_Serif-Web-Bold';
+	margin-top: -17px;
+	font-size: 12pt;
+}
+.post-test-quiz .resultBlock .rationalTxt{
+	color: #000;
+
+}
+
+.post-test-quiz .finishPara{
+   	  text-align: center !important;
+   	  display: none;
+   }
+
+.post-test-quiz .finishTest,
+.post-test-quiz .reviewTest{
+   	background-color: #42A0E7;
+    color: #fff;
+   padding: 5px;
+    border-radius: 2px;
+    border: 0;
+	    width: 100px;
+}
+.post-test-quiz .finishTest,
+.post-test-quiz .reviewTest:hover{		
+		padding: 5px;
+		border:0;
+}
+.post-test-quiz .finishTest,
+.post-test-quiz .reviewTest:focus{
+		border:0;
+}
+
+/*..*************************************  Post-test Screen CSS Ends ******************************************.. */
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+/*..*************************************  Glossary Screen CSS Starts ******************************************.. */
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.glossary h1{
+	margin-bottom: 30px;
+}
+.glossary p{
+	background-color: #fff;
+	padding: 12px 15px;
+	margin-bottom: 30px;
+	box-shadow: 0px 4px 0px #D4D2CF;
+	-moz-box-shadow: 0px 4px 0px #D4D2CF;
+    -webkit-box-shadow: 0px 4px 0px #D4D2CF;
+    -ms-box-shadow: 0px 4px 0px #D4D2CF;
+}
+.glossary span{
+	color:#00B098;
+	font-weight: bold;
+}
+
+/*..*************************************  Glossary Screen CSS Ends ******************************************.. */
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+/*..*************************************  Acronyms Screen CSS Starts ******************************************.. */
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.acronyms{
+	color: #5C5C5B;	
+}
+.acronyms h1{
+	margin-bottom: 20px;	
+}
+.acronyms ul{
+	padding-left: 15px;
+}
+.acronyms ul li{
+	font-family: 'PT_Serif-Web-Regular';
+	padding: 7px 0px;
+	list-style-type:none;
+}
+.acronyms ul li:before{
+	content: '\00b7';
+    font-size: 75px;
+    line-height: 22px;
+    vertical-align: top;
+}
+.acronyms span{
+	font-weight: bold;
+	color: #525151;
+	padding-left: 5px;
+}
+
+/*..*************************************  Acronyms Screen CSS Ends ******************************************.. */
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/*..*************************************  References Screen CSS Starts ******************************************.. */
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.references h1{
+	margin-bottom: 20px;
+}
+.references p{
+	color: #525151;
+	font-family: "PT_Serif-Web-Regular";
+	text-align: left;
+	margin-bottom: 13pt;
+}
+
+
+
+.references span{
+	color: #414141;
+	font-family: "PT_Serif-Web-Bold";
+	width: 100%;
+}
+.references .links{
+	color: #89BAD8;
+	font-family: "PT_Serif-Web-Regular";
+	font-size: 10pt;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.references .links1{
+	color: #89BAD8;
+	font-family: "PT_Serif-Web-Regular";
+	font-size: 10pt;
+padding-left: 5px;
+}
+/* .references .divider:before{
+	content: "\u2219";
+
+} */
+ .references .divider{
+	  
+    display: inline;
+    font-size: 16pt;
+vertical-align:middle;
+} 
+
+.references .span-url{
+	text-decoration: underline;
+	color: #EA602E;
+	font-family: "PT_Serif-Web-Regular";
+}
+.references .ref-block{
+	 display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;
+	  display: flex;
+}
+.references .ref-block .dropdown{
+	min-width: 20px;
+	min-height: 30px;
+}
+
+.references .ref-block .dropdown-menu{
+	z-index: 999;
+	margin-top: -10px; 
+}
+.references .ref-block .dropdown .caret-right {
+  border-left: 8px solid #000;
+  border-right: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+.references .ref-block .dropdown .dropdown-menu ul{
+	border-radius: 5px;
+}
+.references .ref-block .dropdown .dropdown-menu li a{
+	color: #005282;
+}
+
+/*..*************************************  Case-Study CSS Starts ******************************************.. */
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.case-study .case-image img{
+	background-color: #fff;
+	padding: 5px;
+	border:1px solid #D0D8E8;
+}
+
+
+
+
+/* -----------------------Media Query Specific to a screen ----------------------------*/
+
+
+/*------------------Intro Page ---------*/
+@media all and (max-width: 768px) and (orientation:portrait) {
+	.intro{
+		/* height: auto; */
+	}
+	.intro-left{
+		/* min-height: 940px; */
+	}
+	.intro-left-img span{
+		font-size: 22pt;
+		margin-top :8px;
+	}
+	.intro-left-img img{
+		/* width: 50%;
+		padding-bottom: 10px; */
+	}
+
+	.intro-left .coverImage{
+		/* background-color: #005282; */
+		    border-style: #005184;
+	}
+
+	.intro-left .iconImage{
+		/* background-color: #24B2A1; */
+		border-style: #005184;
+	}
+	.refrences{
+		margin-bottom: 20px;
+	}
+	.contentCustom{
+		margin-top:90px;
+	}
+	.modal-dialog{
+		margin-top:90px !important;
+	}
+}
+@media all and (max-width: 768px) and (orientation:landscape) {
+	.post-test-quiz .submitPara{
+   	  text-align: center !important;
+   	  margin-top: 6%;
+   }
+}
+
+@media all and (max-width: 640px) and (orientation:portrait) {
+	.contentCustom{
+		margin-top:0px;
+	}
+	.modal-dialog{
+		margin-top:0px !important;
+	}
+.progress-icon { width:10%; }
+	.progress-label { float:left; width:90%; }
+	.progress { margin-top:5px; }
+}
+
+
+@media all and (max-width: 320px) and (orientation:portrait) {
+	.intro_module {
+       padding: 10px 0 0px 0px;
+	   }
+
+   .pre-test .form .qn-block {
+        width: 100%;
+        margin: 20px 10px;
+	}
+	.pre-test .form .control-label {
+       font-size: 11pt;
+    }
+
+    .pre-test .form .radio {
+        font-size: 10pt;
+    }
+    .navigation .nav-pre, .navigation .nav-next {
+       font-size: 9pt !important;
+       min-height: 25px;
+	}
+	.navigation {
+      height: 30px !important;
+	}
+	.navigation .nav-left, .navigation .nav-right {
+       top: 2px !important;
+	}
+	.navigation .nav-middle {
+      top: 2px !important;
+	}
+	.progress-icon { width:10% !important; float:left !important; }
+	.progress-label { float:left !important; width:90% !important; }  
+	.progress { margin-top:5px; }
+}
+
+@media all and (max-width: 480px) and (orientation:portrait) {
+	.intro-left {
+       /* min-height: 485px; */
+   }
+   .intro-left-img span {
+    font-size: 12pt;
+    margin-top: 0px;
+   }
+
+   .acronyms ul li {
+    padding: 7px 10px;
+    text-indent: -23px;
+   }
+   .post-test .info p {
+    font-size: 13pt;
+    padding: 5% 2%;
+    text-align: center;
+  }
+  .post-test .info h1 {
+    font-size: 20pt;
+    
+ }
+ .post-test .proceed p {
+    font-size: 13pt;
+ }
+  .contentCustom{
+	margin-top:80px;
+ }
+ .modal-dialog{
+	margin-top:80px !important;
+ }
+ .progress-icon { width:10% !important; float:left !important; }
+ .progress-label { float:left !important; width:90% !important; } 
+ .progress { margin-top:5px; }
+}
+
+
+

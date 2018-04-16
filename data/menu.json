@@ -1,0 +1,74 @@
+{
+	"modules":[
+	
+	{
+		"module":"Welcome",
+		"url":"screens/welcome.html",
+		"id":0,
+		"topics":[
+		],
+		"audio": false
+	},
+	
+	{
+		"module":"Learning Objectives",
+		"url":"screens/intro.html",
+		"id":1,
+		"topics":[
+		],
+		"audio": false
+	},
+	{
+		"module":"Pre-test",
+		"url":"screens/pretest.html",
+		"id":2,
+		"topics":[
+		],
+		"audio": true,
+		"audio_url": "audio/Narrator.mp3"
+	},
+		{
+		"module":"Importance of Fire Safety of the health",
+		"url":"screens/acronyms.html",
+		"id":3,
+		"topics":[
+		],
+		"audio": false
+	},
+	
+	{
+		"module":"Causes of Fire",
+		"url":"screens/references.html",
+		"id":4,
+		"topics":[
+		],
+		"audio": true,
+		"audio_url": "audio/FireSafety2.mp3"
+	},
+	{
+		"module":"Fire Tetrahedron",
+		"url":"screens/references1.html",
+		"id":5,
+		"topics":[
+		],
+		"audio": false
+	},
+	{
+		"module":"Types of Fire",
+		"url":"screens/references2.html",
+		"id":6,
+		"topics":[
+		],
+		"audio": false
+	},
+	
+	{
+		"module":"Post-test",
+		"url":"screens/postTest.html",
+		"id":10,
+		"topics":[
+		],
+		"audio": false
+	}
+   ]
+}

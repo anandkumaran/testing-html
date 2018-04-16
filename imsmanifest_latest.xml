@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="MANIFEST01" version="1.2" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+<metadata>
+<schema>ADL SCORM</schema>
+<schemaversion>1.2</schemaversion>
+</metadata>
+<organizations default="lo_0001">
+<organization identifier="lo_0001" structure="hierarchical">
+<title>Fire Safety</title>
+<item identifier="Page1" identifierref="Page1Res" isvisible="true">
+<title>Fire Safety</title>
+<!--<adlcp:masteryscore>80</adlcp:masteryscore>-->
+</item>
+</organization>
+</organizations>
+<resources>
+<resource identifier="Page1Res" adlcp:scormtype="sco" href="index.html" type="webcontent" />
+<resource identifier="RES-F4769F9BDB7466BE65088239C12046D1" type="webcontent" href="css/fonts/glyphicons-halflings-regular.eot"><file href="css/fonts/glyphicons-halflings-regular.eot" /></resource>
+<resource identifier="RES-89889688147BD7575D6327160D64E760" type="webcontent" href="css/fonts/glyphicons-halflings-regular.svg"><file href="css/fonts/glyphicons-halflings-regular.svg" /></resource>
+<resource identifier="RES-E18BBF611F2A2E43AFC071AA2F4E1512" type="webcontent" href="css/fonts/glyphicons-halflings-regular.ttf"><file href="css/fonts/glyphicons-halflings-regular.ttf" /></resource>
+<resource identifier="RES-FA2772327F55D8198301FDB8BCFC8158" type="webcontent" href="css/fonts/glyphicons-halflings-regular.woff"><file href="css/fonts/glyphicons-halflings-regular.woff" /></resource>
+<resource identifier="RES-448C34A56D699C29117ADC64C43AFFEB" type="webcontent" href="css/fonts/glyphicons-halflings-regular.woff2"><file href="css/fonts/glyphicons-halflings-regular.woff2" /></resource>
+<resource identifier="RES-33696C1691B434F58DD2887F2FA2A30F" type="webcontent" href="css/fonts/PT_Serif-Web-Bold.eot"><file href="css/fonts/PT_Serif-Web-Bold.eot" /></resource>
+<resource identifier="RES-1ED662C58F58EBAB5F809AF2D540C047" type="webcontent" href="css/fonts/PT_Serif-Web-Regular.eot"><file href="css/fonts/PT_Serif-Web-Regular.eot" /></resource>
+<resource identifier="RES-CB43E1F253BE62A17A0BD03315D34471" type="webcontent" href="css/fonts/PT_Serif-Web-Regular.woff"><file href="css/fonts/PT_Serif-Web-Regular.woff" /></resource>
+<resource identifier="RES-B0C4EEB6FAD47725EEA5FCA1A9ACA323" type="webcontent" href="css/libs/bootstrap.min.css"><file href="css/libs/bootstrap.min.css" /></resource>
+<resource identifier="RES-AD68BF009613378822D6DEDBC48F5F57" type="webcontent" href="css/libs/sweetalert.css"><file href="css/libs/sweetalert.css" /></resource>
+<resource identifier="RES-78E51DA82FE5E97E6BD2BFC70E7E64FA" type="webcontent" href="css/framework.css"><file href="css/framework.css" /></resource>
+<resource identifier="RES-D572F47F22BB5E87BB5579FC0236D0D6" type="webcontent" href="css/media.css"><file href="css/media.css" /></resource>
+<resource identifier="RES-13DB746B358192DD13844B7C83DC9E7E" type="webcontent" href="css/screen.css"><file href="css/screen.css" /></resource>
+<resource identifier="RES-4BBA8E2FAF680182161AA420CCD7CC51" type="webcontent" href="data/citation.json"><file href="data/citation.json" /></resource>
+<resource identifier="RES-B88C3EC623C4E8F439240F8524F626B2" type="webcontent" href="data/menu.json"><file href="data/menu.json" /></resource>
+<resource identifier="RES-4FDAD47585AE9489153906526017C056" type="webcontent" href="data/post-test.json"><file href="data/post-test.json" /></resource>
+<resource identifier="RES-BCA702B48F526BF410CBD43938398B2A" type="webcontent" href="data/pretest.json"><file href="data/pretest.json" /></resource>
+<resource identifier="RES-733EE64399ECDC51B3AB17C423271CCB" type="webcontent" href="fonts/Apache License.txt"><file href="fonts/Apache License.txt" /></resource>
+<resource identifier="RES-F4769F9BDB7466BE65088239C12046D1" type="webcontent" href="fonts/glyphicons-halflings-regular.eot"><file href="fonts/glyphicons-halflings-regular.eot" /></resource>
+<resource identifier="RES-F721466883998665B87923B92DEA655B" type="webcontent" href="fonts/glyphicons-halflings-regular.svg"><file href="fonts/glyphicons-halflings-regular.svg" /></resource>
+<resource identifier="RES-E18BBF611F2A2E43AFC071AA2F4E1512" type="webcontent" href="fonts/glyphicons-halflings-regular.ttf"><file href="fonts/glyphicons-halflings-regular.ttf" /></resource>
+<resource identifier="RES-FA2772327F55D8198301FDB8BCFC8158" type="webcontent" href="fonts/glyphicons-halflings-regular.woff"><file href="fonts/glyphicons-halflings-regular.woff" /></resource>
+<resource identifier="RES-448C34A56D699C29117ADC64C43AFFEB" type="webcontent" href="fonts/glyphicons-halflings-regular.woff2"><file href="fonts/glyphicons-halflings-regular.woff2" /></resource>
+<resource identifier="RES-33696C1691B434F58DD2887F2FA2A30F" type="webcontent" href="fonts/PT_Serif-Web-Bold.eot"><file href="fonts/PT_Serif-Web-Bold.eot" /></resource>
+<resource identifier="RES-50145685042B4DF07A1FD19957275B81" type="webcontent" href="fonts/PT_Serif-Web-Bold.ttf"><file href="fonts/PT_Serif-Web-Bold.ttf" /></resource>
+<resource identifier="RES-39091C70AB053D692F10F45AA9478A46" type="webcontent" href="fonts/PT_Serif-Web-Bold.woff"><file href="fonts/PT_Serif-Web-Bold.woff" /></resource>
+<resource identifier="RES-78B08A68D05D5FABB0B8EFFD51BF6ADE" type="webcontent" href="fonts/PT_Serif-Web-BoldItalic.ttf"><file href="fonts/PT_Serif-Web-BoldItalic.ttf" /></resource>
+<resource identifier="RES-1A6306DAB0093BDC013DD118A7DB20D0" type="webcontent" href="fonts/OpenSans-ExtraBold.ttf"><file href="fonts/OpenSans-ExtraBold.ttf" /></resource>
+<resource identifier="RES-A1ED26711ED5E271888959C6121C8891" type="webcontent" href="fonts/OpenSans-ExtraBold.woff"><file href="fonts/OpenSans-ExtraBold.woff" /></resource>
+<resource identifier="RES-73D6BB0D4F596A91992E6BE32E82E3BC" type="webcontent" href="fonts/OpenSans-ExtraBoldItalic.ttf"><file href="fonts/OpenSans-ExtraBoldItalic.ttf" /></resource>
+<resource identifier="RES-C7DCCE084C445260A266F92DB56F5517" type="webcontent" href="fonts/OpenSans-Italic.ttf"><file href="fonts/OpenSans-Italic.ttf" /></resource>
+<resource identifier="RES-1BF71BE111189E76987A4BB9B3115CB7" type="webcontent" href="fonts/OpenSans-Light.ttf"><file href="fonts/OpenSans-Light.ttf" /></resource>
+<resource identifier="RES-6943FB6FD4200F3D073469325C6ACDC9" type="webcontent" href="fonts/OpenSans-LightItalic.ttf"><file href="fonts/OpenSans-LightItalic.ttf" /></resource>
+<resource identifier="RES-1ED662C58F58EBAB5F809AF2D540C047" type="webcontent" href="fonts/PT_Serif-Web-Regular.eot"><file href="fonts/PT_Serif-Web-Regular.eot" /></resource>
+<resource identifier="RES-629A55A7E793DA068DC580D184CC0E31" type="webcontent" href="fonts/PT_Serif-Web-Regular.ttf"><file href="fonts/PT_Serif-Web-Regular.ttf" /></resource>
+<resource identifier="RES-CB43E1F253BE62A17A0BD03315D34471" type="webcontent" href="fonts/PT_Serif-Web-Regular.woff"><file href="fonts/PT_Serif-Web-Regular.woff" /></resource>
+<resource identifier="RES-31A82A9BDE90EEC038693F26ADA892AD" type="webcontent" href="fonts/OpenSans-Semibold.eot"><file href="fonts/OpenSans-Semibold.eot" /></resource>
+<resource identifier="RES-33F225B8F5F7D6B34A0926F58F96C1E9" type="webcontent" href="fonts/OpenSans-Semibold.ttf"><file href="fonts/OpenSans-Semibold.ttf" /></resource>
+<resource identifier="RES-DCE8F6F7BB4147F91BB7DC1FEA4FFDAB" type="webcontent" href="fonts/OpenSans-Semibold.woff"><file href="fonts/OpenSans-Semibold.woff" /></resource>
+<resource identifier="RES-73F7301A9CD7A086295401EEFE0C998F" type="webcontent" href="fonts/OpenSans-SemiboldItalic.ttf"><file href="fonts/OpenSans-SemiboldItalic.ttf" /></resource>
+<resource identifier="RES-011A958460CAC2C9008268AF7BA51205" type="webcontent" href="fonts/Roboto-Bold.ttf"><file href="fonts/Roboto-Bold.ttf" /></resource>
+<resource identifier="RES-0076F98BA8AE7A6C6A9DA788F43E1A90" type="webcontent" href="fonts/Roboto-Bold.woff"><file href="fonts/Roboto-Bold.woff" /></resource>
+<resource identifier="RES-79754934891C17DD798CA5E7EB5FA9A9" type="webcontent" href="fonts/Roboto-Light.ttf"><file href="fonts/Roboto-Light.ttf" /></resource>
+<resource identifier="RES-1EC06EED11BBCB1EE510B8F3522ADEA8" type="webcontent" href="fonts/Roboto-Regular.ttf"><file href="fonts/Roboto-Regular.ttf" /></resource>
+<resource identifier="RES-317A4210EF29A41C456503C8E5951448" type="webcontent" href="fonts/RobotoSlab-Thin.ttf"><file href="fonts/RobotoSlab-Thin.ttf" /></resource>
+<resource identifier="RES-21366B62D1DBD0D3CA025F664E9CA057" type="webcontent" href="images/Dart.png"><file href="images/Dart.png" /></resource>
+<resource identifier="RES-E27316690B5B6341DB5A0CFF4EFE1078" type="webcontent" href="images/minus.png"><file href="images/minus.png" /></resource>
+<resource identifier="RES-57918FEC87C4BB8104C8F5BB417EBF61" type="webcontent" href="images/ns_v27_n34_7460_0001.jpg"><file href="images/ns_v27_n34_7460_0001.jpg" /></resource>
+<resource identifier="RES-8EC9430F49340F927EE329CD7F8F7150" type="webcontent" href="images/ns_v27_n34_7460_0002.jpg"><file href="images/ns_v27_n34_7460_0002.jpg" /></resource>
+<resource identifier="RES-C5AC16621D35043E37AB30720C656EE3" type="webcontent" href="images/ns_v27_n34_7460_0003.jpg"><file href="images/ns_v27_n34_7460_0003.jpg" /></resource>
+<resource identifier="RES-74D23BDF1BCA443C13814EB5C2AB34A8" type="webcontent" href="images/panel1.jpg"><file href="images/panel1.jpg" /></resource>
+<resource identifier="RES-BDD2AE4D5281EA73994063342B44CD45" type="webcontent" href="images/panel2.png"><file href="images/panel2.png" /></resource>
+<resource identifier="RES-E38DC018B8A42B09FD6C147A56015A6C" type="webcontent" href="images/plus.png"><file href="images/plus.png" /></resource>
+<resource identifier="RES-60611B35599A943D04E304178BDDCC35" type="webcontent" href="images/table1.jpg"><file href="images/table1.jpg" /></resource>
+<resource identifier="RES-1E663EB55D603800F4809A0C448B6C44" type="webcontent" href="images/table2.jpg"><file href="images/table2.jpg" /></resource>
+<resource identifier="RES-61A1D30F24B08BBB52ABE67C2C1FD8EB" type="webcontent" href="images/table3.jpg"><file href="images/table3.jpg" /></resource>
+<resource identifier="RES-E0B4D0FDC0C077DB64ADC4E38546B47B" type="webcontent" href="images/timeout.png"><file href="images/timeout.png" /></resource>
+<resource identifier="RES-FB0E635DB142B1B9FCE20FE2370EC6CC" type="webcontent" href="js/libs/bootstrap.min.js"><file href="js/libs/bootstrap.min.js" /></resource>
+<resource identifier="RES-D65770EF00A789739BA580FE2949FC38" type="webcontent" href="js/libs/detect-zoom.min.js"><file href="js/libs/detect-zoom.min.js" /></resource>
+<resource identifier="RES-7246AC4EA61A2F4D62F31FF9251D5528" type="webcontent" href="js/libs/jquery.min.js"><file href="js/libs/jquery.min.js" /></resource>
+<resource identifier="RES-0068F44B0AA1B83FA7679860CEB26590" type="webcontent" href="js/libs/sweetalert.min.js"><file href="js/libs/sweetalert.min.js" /></resource>
+<resource identifier="RES-3D6929982F2BCCCF1D1C223A5030150E" type="webcontent" href="js/app.js"><file href="js/app.js" /></resource>
+<resource identifier="RES-16A8B257A146D4DBEE17D186EC9F0A18" type="webcontent" href="js/default.js"><file href="js/default.js" /></resource>
+<resource identifier="RES-20F9A79869CF23B0AE53089E43592B31" type="webcontent" href="js/menu.js"><file href="js/menu.js" /></resource>
+<resource identifier="RES-DC90EA9D62C3E5997464775F6EFC3F58" type="webcontent" href="js/nav.js"><file href="js/nav.js" /></resource>
+<resource identifier="RES-6D5F0C5F8CA044D9C94F0F43074F46AC" type="webcontent" href="js/scorm_adaptor.js"><file href="js/scorm_adaptor.js" /></resource>
+<resource identifier="RES-BBBC4003A1481A101938CFC6C727476C" type="webcontent" href="screens/welcome.html"><file href="screens/welcome.html" /></resource>
+<resource identifier="RES-55CC0121D1B4529BB59E22D3F1EABAB2" type="webcontent" href="screens/acronyms.html"><file href="screens/acronyms.html" /></resource>
+<resource identifier="RES-4A095EA68B6E0ED12DD2CA017E3BCC06" type="webcontent" href="screens/glossary.html"><file href="screens/glossary.html" /></resource>
+<resource identifier="RES-84F9597412779349D3CFA76E43200B01" type="webcontent" href="screens/intro.html"><file href="screens/intro.html" /></resource>
+<resource identifier="RES-4C4C1A6FF871BF4074D525BFD1BCA610" type="webcontent" href="screens/menu.html"><file href="screens/menu.html" /></resource>
+<resource identifier="RES-CCD5FD060EFE1401AACEB8396213F7D2" type="webcontent" href="screens/nav.html"><file href="screens/nav.html" /></resource>
+<resource identifier="RES-BF7A015C19B797A8FF4192C141CC7285" type="webcontent" href="screens/postQzTemplate.html"><file href="screens/postQzTemplate.html" /></resource>
+<resource identifier="RES-5EA0B4BB9A85A85C918F94F5A1715BD2" type="webcontent" href="screens/postTest.html"><file href="screens/postTest.html" /></resource>
+<resource identifier="RES-33E403F75207AEC0CEF6A0A63FDECF35" type="webcontent" href="screens/pretest.html"><file href="screens/pretest.html" /></resource>
+<resource identifier="RES-9D31C7CC65202AB9D9AD14AE0C01BAEC" type="webcontent" href="screens/references.html"><file href="screens/references.html" /></resource>
+<resource identifier="RES-E4BF07D81282A1331DFD680BE7DA80CD" type="webcontent" href="screens/references1.html"><file href="screens/references1.html" /></resource>
+<resource identifier="RES-BBBC4003A1481A101938CFC6C727476B" type="webcontent" href="screens/references2.html"><file href="screens/references2.html" /></resource>
+<resource identifier="RES-5526E84A97989027DBF3F30014E0CB5C" type="webcontent" href="screens/references3.html"><file href="screens/references3.html" /></resource>
+<resource identifier="RES-5526E84A97989027DBF3F30014E0CB5D" type="webcontent" href="screens/references4.html"><file href="screens/references4.html" /></resource>
+<resource identifier="RES-8ADA2D0DB71F198BA3740F00C7C77641" type="webcontent" href="screens/summary.html"><file href="screens/summary.html" /></resource>
+<resource identifier="RES-E4BF07D81282A1331DFD680BE7DA80CE" type="webcontent" href="screens/learning-module/01_aims.html"><file href="screens/learning-module/01_aims.html" /></resource>
+<resource identifier="RES-8ADA2D0DB71F198BA3740F00C7C77642" type="webcontent" href="screens/learning-module/02_introduction.html"><file href="screens/learning-module/02_introduction.html" /></resource>
+<resource identifier="RES-FCFC99B54DED58AAD1F4BBF629161776" type="webcontent" href="screens/learning-module/03_being_compassionate_with_self.html"><file href="screens/learning-module/03_being_compassionate_with_self.html" /></resource>
+<resource identifier="RES-5526E84A97989027DBF3F30014E0CB5C" type="webcontent" href="screens/learning-module/04_being_compassionate_with_colleagues.html"><file href="screens/learning-module/04_being_compassionate_with_colleagues.html" /></resource>
+<resource identifier="RES-3FC0A8EE0A5B25F9CDDE51ACC7E8F634" type="webcontent" href="screens/learning-module/05_conclusions.html"><file href="screens/learning-module/05_conclusions.html" /></resource>
+<resource identifier="RES-BBBC4003A1481A101938CFC6C727476D" type="webcontent" href="screens/learning-module/Table-1.html"><file href="screens/learning-module/Table-1.html" /></resource>
+<resource identifier="RES-D863899E6624D27839DDA97EC8A35D76" type="webcontent" href="screens/learning-module/Table-2.html"><file href="screens/learning-module/Table-2.html" /></resource>
+<resource identifier="RES-AA11FEDB62A019C925FCEDBC366DC675" type="webcontent" href="screens/learning-module/Table-3.html"><file href="screens/learning-module/Table-3.html" /></resource>
+</resources>
+</manifest>

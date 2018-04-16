@@ -1,0 +1,81 @@
+<div class="col-md-2 col-lg-2 col-xs-3 noPadLeftRight nav-left">
+	<div class="nav-pre visible-off">
+		<div class="nav-btn-cont">
+			<span class="glyphicon glyphicon-menu-left"></span>
+			<span class="nav-pre-txt"></span>
+		</div>
+	</div>
+</div>
+<div class="col-md-8 col-lg-8 col-xs-6 nav-middle">
+	<div class="progress-wrapper">
+		<div class="menu-wrap2">
+			<div class="menu-sidebar2" id="menu-sidebar2">
+				
+			</div>
+		</div>
+		<span class="toggle-button2">
+			<img src="images/Btn0001.png" alt="" class="state1" />
+			<img src="images/Btn0002.png" alt="" class="state2" />
+		</span>
+
+	</div>
+</div>
+<div class="col-md-2 col-lg-2 col-xs-3 noPadLeftRight nav-right">
+
+	<div class="text-right next-nav-pos">
+		<span id="play" class="audio-pay" onClick="play()">
+				<i class="fas fa-volume-off"></i>				
+		</span>
+		<span id="stop" class="audio-pay" onClick="play()">
+				<i class="fas fa-volume-up"></i>
+								
+		</span>
+		<span class="nav-next visible-off">
+			<span class="nav-btn-cont">
+				<span class="nav-next-txt"></span>
+				<span class="glyphicon glyphicon-menu-right"></span>
+			</span>
+		</span>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	// Hamburger button
+
+    populateMenuBottom(menuData);
+
+	$('.toggle-button2').on('click', function () {
+		$(this).toggleClass('button-open2');
+		$('.menu-wrap2').toggleClass('menu-show2');
+	});
+
+	$(document).ready(function () {
+
+		var $menuWrap = $('.menu-wrap2'),
+			$sidebarArrow = $('.sidebar-menu-arrow2');
+
+		// Sidebar navigation arrows
+
+		$sidebarArrow.click(function () {
+			$(this).next().slideToggle(300);
+		});
+
+		var audioElement = document.getElementById('audio1');
+		$('#stop, #play').hide();
+
+		$('#play').click(function () {
+			$('#play').hide();
+			$('#stop').show();
+			audioElement.play();
+		});
+
+
+		$('#stop').click(function () {
+			$('#play').show();
+			$('#stop').hide();
+			audioElement.pause();
+		});
+
+	});
+</script>
