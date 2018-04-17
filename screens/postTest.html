@@ -34,7 +34,7 @@ $(document).on('click', '.post-test-quiz label.radio input', function () {
                 clearTime = setTimeout(function() {
                     validatePostAns();
                     populateQuestion(qn)
-                }, 500)
+                }, 2000)
             } 
         } else if($('.qn-block input:checked').length > postQuizData.questions[0].correct.length) {
             $(this).parent().parent().find('input:checked').attr('checked', false)
@@ -53,7 +53,7 @@ $(document).on('click', '.post-test-quiz label.radio input', function () {
             clearTime = setTimeout(function() {
                 validatePostAns();
                 populateQuestion(qn)
-            }, 500)
+            }, 2000)
         } 
     }
     currentPostQn = previousQn = qn

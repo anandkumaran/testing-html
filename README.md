@@ -13,3 +13,5 @@ Changelog
 
 17-04 
 - Icon changed for Mobile toc button on nav.html line #17
+- Div element added '.footer-bottom' on nav.html line #1
+- '.progress-wrapper' removed from its origin place and placed before the script tag on nav.html line #32

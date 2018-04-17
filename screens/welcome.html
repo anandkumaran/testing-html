@@ -34,24 +34,37 @@
 </div>
 
 <script>
+    if(menuData.modules[0].overlay) {
+        loadVideo(menuData.modules[0])
+    }
 $(document).ready(function() {
-    $('.js-welcome-next').on('click', function() {
-    $('#menu-ul li.selected').addClass('completed');
-    $('#menu-ul li.selected').find('div').animate({'width': '100%'}, 500);
-    $('#menu-ul li.selected').find('span').css('left','86%').text('100%');
+    $('.js-welcome-next').on('click', function(event) {
+    var currentId = $('#menu-ul li.selected').attr('id').split('_')[1];
 
-    $('#menu-sidebar2 .progress-wrapper-main .selected').addClass('completed')
-    $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').removeClass('selected')
-    $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').next().show();
-    $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').next().find('.progress-bar').css('left','100%').text('100%');
-    $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').parent().find('.progress-icon').addClass("button-open2");
-    // var obj = getIndexObjFromMenu($('#menu-ul li.selected').next().find('strong').text());
-    
-    // navigateToIndex(obj);
-    $('#menu-ul li.completed').removeClass('selected');
-    $('#menu-ul li.completed').next().trigger('click').addClass('selected');  
-    $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').parent().addClass('completed');
-    $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').parent().next().find('.progress-label').addClass('selected');
-    })
+        $('#menu-ul li.selected').addClass('completed');
+        $('#menu-ul li.selected').find('div').animate({'width': '100%'}, 500);
+        $('#menu-ul li.selected').find('span').css('left','86%').text('100%');
+
+        $('#menu-sidebar2 .progress-wrapper-main .selected').addClass('completed')
+        $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').removeClass('selected')
+        $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').next().show();
+        $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').next().find('.progress-bar').css('left','100%').text('100%');
+        $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').parent().find('.progress-icon').addClass("button-open2");
+
+        $('#menu-ul li.completed').removeClass('selected');
+        $('#menu-ul li.completed').next().addClass('selected'); 
+
+        $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').parent().addClass('completed');
+        $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').parent().next().find('.progress-label').addClass('selected');
+
+        if(menuData.modules[currentId].after_overlay) {
+            loadAfterVideo(menuData.modules[currentId], $('#menu-ul li.selected').attr('data-title'))
+        } else {
+            // $('#menu-ul li.completed').next().trigger('click');
+
+            var obj = getIndexObjFromMenu($('#menu-ul li.selected').attr('data-title') , null);
+            navigateToIndex(obj);
+        }
+    });
 }); 
 </script>

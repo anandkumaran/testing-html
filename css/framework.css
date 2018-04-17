@@ -1441,9 +1441,9 @@ div.box .gap-left{margin: 5px 19px 0px 10px;}
 	font-size: 1em;
 	font-weight: 700;
 	overflow: auto;
-	transition: all 0.6s ease 0s;
+	transition: all 1s ease 0s;
 	z-index: 10;
-	bottom:44px;
+	bottom: 39px;
 	margin-bottom:-650px;
 	left:50%;
 	border:1px solid #999;
@@ -1589,7 +1589,7 @@ div.box .gap-left{margin: 5px 19px 0px 10px;}
 	color: #85266A;
 }
 .progress { float:left; width: 90%; margin-left: 4%; height: 2px; overflow: visible; position: relative; display: none; background: #4170A4; }
-.progress .progress-bar { font-size: 10px; background: #4170A4; position: absolute; bottom: -10px; left: 0%; padding: 0 4px; width: auto; height: auto; border-radius: 5px; }
+.progress .progress-bar { font-size: 10px; background: #4170A4; position: absolute; bottom: -11px; left: 0%; padding: 0 4px; width: auto; height: auto; border-radius: 5px; }
 .progress-wrapper-main { float:left; width:100%; padding:5px 0; position: relative; }
 .progress-wrapper-main:before {
 	background: #ccc;
@@ -1644,9 +1644,12 @@ div.box .gap-left{margin: 5px 19px 0px 10px;}
 	vertical-align: top;
 }
 .next-nav-pos span {
-	line-height: 25px;
+	/*line-height: 25px;*/
 }
 
+.next-nav-pos .audio-pay {
+	display: none;
+}
 
 .pre-test .form .radio.checked{
 	background:#ccc;
@@ -1824,4 +1827,11 @@ span.welcome-note-btn {
 		bottom: 20px;
 		position: relative;
 	}
+}
+
+.footer-bottom {
+	min-height: 40px;
+	background: #4170A4;
+	position: relative;
+	z-index: 14;
 }

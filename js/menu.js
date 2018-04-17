@@ -102,6 +102,7 @@ function populateMenuBottom(data){
         var progressBar = document.createElement('div');
 
         wrap.className = 'progress-wrapper-main';
+        wrap.id = 'menu_topic_'+node.id
 
         topicIcon.className = 'progress-icon';
         topicIcon.id = node.module.replace(/ /g,"_") + '_icon';
@@ -122,6 +123,7 @@ function populateMenuBottom(data){
             topicLabel.dataset.audio = false;
         }
 
+        topicLabel.id = 'link_topic_'+node.id
         topicLabel.appendChild(document.createTextNode(node.module));
 
         progress.className = 'progress';
@@ -221,6 +223,8 @@ function prepareList() {
         event.stopPropagation();
         postTestStart = false;
         var parentNode = null;
+        var currentId = $('#menu-ul li.selected').attr('id').split('_')[1];
+
         for(var i=0;i<visitedPage.length;i++) {
             if(visitedPage[i] != event.target.firstChild.textContent && visitedPage[i]!='Post-test' && visitedPage[i] !='Pre-test') {
                 str = visitedPage[i].replace(/ /g,"_");
@@ -229,8 +233,7 @@ function prepareList() {
                 $('#'+str+'_ani').animate({'width': '100%'}, 500);
                 $('#'+str+'_span').animate({'left':'86%'}, 500).text('100%');
             }
-        }
-        
+        }        
 
         if(event.target.firstChild.textContent){
           if(checkValidModulePage(event.target.firstChild.textContent) || (event.target.firstChild.textContent == "Learning Points")){
@@ -270,10 +273,14 @@ function prepareList() {
                      $(".content-right-panel").css({"display" : "block"});
 
                   }
-               
-                
+
                 var obj = getIndexObjFromMenu(event.target.firstChild.textContent , parentNode);
-                navigateToIndex(obj);
+
+                if(menuData.modules[currentId].after_overlay) {
+                    loadAfterVideo(menuData.modules[currentId], event.target.firstChild.textContent)
+                } else {
+                    navigateToIndex(obj);
+                }
                 
                 if(checkIfMobileAndPortrait()){
                     toggleFlag = true;
@@ -305,6 +312,7 @@ function prepareList() {
      var $li = $(document).on('click', '#menu-sidebar2 .progress-label', function(event){
         $('.menu-wrap2').removeClass('menu-show2');
         $('.toggle-button2').removeClass('button-open2');
+        var currentId = $('#menu-sidebar2 .progress-wrapper-main .selected').attr('id').split('_')[2];
         event.stopPropagation();
         postTestStart = false;
         var parentNode = null;
@@ -326,7 +334,7 @@ function prepareList() {
           if(checkValidModulePage(event.target.firstChild.textContent) || (event.target.firstChild.textContent == "Learning Points")){
                 
                 var _index = getMenuNodeIndex(event.target.firstChild.textContent);
-                console.log(_index)
+                
                 pageStatusListArray[_index].visited = 1;
                 updateMenuVisited();
                 visitedPage.push(event.target.firstChild.textContent)
@@ -356,9 +364,13 @@ function prepareList() {
 
                   }
                
-                console.log('cur ', event.target.firstChild.textContent)
                 var obj = getIndexObjFromMenu(event.target.firstChild.textContent , parentNode);
-                navigateToIndex(obj);
+
+                if(menuData.modules[currentId].after_overlay) {
+                    loadAfterVideo(menuData.modules[currentId], event.target.firstChild.textContent)
+                } else {
+                    navigateToIndex(obj);
+                }
                 
                 if(checkIfMobileAndPortrait()){
                     toggleFlag = true;

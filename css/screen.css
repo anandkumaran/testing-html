@@ -341,7 +341,11 @@ cursor: pointer;
 	display: none;
 	padding: 1%;
 }
+.post-test-quiz .resultBlock p {
+	color: #3e769b;
+}
 .post-test-quiz .resultBlock div {
+	color: #00B098;
 	float: left;
 	width: 100%;
 }
@@ -661,7 +665,7 @@ vertical-align:middle;
 	.navigation .nav-middle {
       top: 2px !important;
 	}
-	.progress { margin-top:5px; }
+	.progress { margin-top: 6px; }
 }
 
 @media all and (max-width: 480px) and (orientation:portrait) {
@@ -695,7 +699,7 @@ vertical-align:middle;
  .modal-dialog{
 	margin-top:80px !important;
  }
- .progress { margin-top:5px; }
+ .progress { margin-top:6px; }
 }
 
 .overlay-wrap {

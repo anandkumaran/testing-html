@@ -217,6 +217,7 @@ window.onload = function () {
     scormAdaptor_setreview(null)
     scormAdaptor_setRecalreview(null)
       /*******************Sumanth Added below code*******************/
+      console.log(appType)
       if (appType != 'standalone') {
         scormAdaptor_getAPI();
         scormAdaptor_adlOnload();
@@ -269,7 +270,7 @@ window.onload = function () {
   });
 
 
-  loadHomePage();
+  // loadHomePage();
     //loadMenu();
 
     isMobileAndPortrait = checkIfMobileAndPortrait();
@@ -279,6 +280,8 @@ window.onload = function () {
       $('.mobile-disable, .menu-bar .menu-icon').hide();
       $('#rowcontent').on('touchstart touchmove', function() {
         $('.container.wrapper').addClass('non-fixed');
+        $('.menu-wrap2').removeClass('menu-show2');
+        $('.toggle-button2').removeClass('button-open2');
         $('#navigation').css('bottom', '-80px');
         $('.menu-bar').animate({'top': '-55px'}, 100);
         $('.toggle-button2').css('bottom', '-40px');
@@ -316,7 +319,7 @@ window.onload = function () {
 
 
   function loadHomePage() {
-    $(".content").load("screens/welcome.html");
+    $(".content").load("screens/welcome.html").attr('id', 'page_num_0');
     $(".navigation").load("screens/nav.html");
 	//$(".navigation").html('<ul id="menu-ul"></ul>');
 	// var div = document.createElement('p');

@@ -56,6 +56,7 @@ $(".intro-image").on("click", function(e) {
 function handleNavigation(direction) {
     visitedPage.push(currentModuleName)
     if (!postTestStart) {
+        var currentId = $('.content').attr('id').split('_')[2];
         var str = getModuleMenuArray(currentModuleName, direction, true);
         if(currentModuleName != 'Pre-test' && currentModuleName != 'Post-test') {
             cur = currentModuleName.replace(/ /g,"_");
@@ -80,17 +81,20 @@ function handleNavigation(direction) {
         var obj = getIndexObjFromMenu(str, null, true);
         /*highlightNextNode(str,direction);*/
 
-
         var _index = getMenuNodeIndex(str);
         if (pageStatusListArray[_index] != undefined) {
             pageStatusListArray[_index].visited = 1;
         }
         updateMenuVisited(str);
 
+        if(menuData.modules[currentId].after_overlay) {
+            loadAfterVideo(menuData.modules[currentId], str)
+        } else {
+            navigateToIndex(obj);
+        }
 
         //highlightNextNode(str,direction);
 
-        navigateToIndex(obj);
     } else {
         handlePostTestNavigation(direction);
     }
@@ -334,10 +338,8 @@ function navigateToIndex(obj) {
     currentModuleName = obj.currentModuleName;
     var page_url = obj.page_url;
 
-
-
     $(".postTestNav").css({ "display": "none" });
-
+    $('.content').attr('id', 'page_num_'+currentIndex);
     if (!(page_url) && (page_url == null)) return;
 
     if (previousUrl != page_url) {
@@ -374,47 +376,7 @@ function navigateToIndex(obj) {
             }).animate({ opacity: '1' });
 
             if(obj.overlay_avail) {
-                var wrap = document.createElement('div');
-                wrap.className = 'overlay-wrap';
-
-                var parent = document.createElement('div');
-                parent.className = 'overlay-parent';
-
-                var close = document.createElement('span');
-                close.className = 'overlay-close';
-                close.appendChild(document.createTextNode('x'));
-
-                var video = document.createElement('video');
-                video.id = currentModuleName.replace(/ /g,"_")+'_vid';
-                video.controls = true;
-                video.style.width = '100%';
-
-                var source = document.createElement('source');
-                source.type = 'video/mp4';
-                source.media = 'all and (min-width: 481px)';
-                source.src = obj.video_url;
-
-                var source1 = document.createElement('source');
-                source1.type = 'video/mp4';
-                source1.media = 'all and (max-width: 480px)';
-                source1.src = obj.video_url_small;
-
-                video.appendChild(source);
-                video.appendChild(source1);
-
-                var content = document.createElement('div');
-                content.className = 'overlay-content';
-                content.appendChild(video);
-
-                parent.appendChild(close);
-                parent.appendChild(content);
-                wrap.appendChild(parent);
-
-                var videoId = currentModuleName.replace(/ /g,"_")+'_vid';
-
-                $('body').append(wrap);
-
-                document.getElementById(videoId).play();
+                loadVideo(obj);
             } else {
                 $('.overlay-wrap').remove();
             }
@@ -445,8 +407,106 @@ function navigateToIndex(obj) {
     /************************Code Ended by Sumanth**************************/
 }
 
-$(document).on('click', '.overlay-wrap .overlay-close', function() {
+function loadVideo(obj) {
+    var wrap = document.createElement('div');
+    wrap.className = 'overlay-wrap';
+    wrap.id = 'before_video';
+
+    var parent = document.createElement('div');
+    parent.className = 'overlay-parent';
+
+    var close = document.createElement('span');
+    close.className = 'overlay-close';
+    close.appendChild(document.createTextNode('x'));
+
+    var video = document.createElement('video');
+    video.id = currentModuleName.replace(/ /g,"_")+'_vid';
+    video.controls = true;
+    video.style.width = '100%';
+
+    var source = document.createElement('source');
+    source.type = 'video/mp4';
+    source.media = 'all and (min-width: 481px)';
+    source.src = obj.video_url;
+
+    var source1 = document.createElement('source');
+    source1.type = 'video/mp4';
+    source1.media = 'all and (max-width: 480px)';
+    source1.src = obj.video_url_small;
+
+    video.appendChild(source);
+    video.appendChild(source1);
+
+    var content = document.createElement('div');
+    content.className = 'overlay-content';
+    content.appendChild(video);
+
+    parent.appendChild(close);
+    parent.appendChild(content);
+    wrap.appendChild(parent);
+
+    var videoId = currentModuleName.replace(/ /g,"_")+'_vid';
+
+    $('body').append(wrap);
+
+    document.getElementById(videoId).play();    
+}
+
+
+function loadAfterVideo(obj, topic) {
+    var wrap = document.createElement('div');
+    wrap.className = 'overlay-wrap';
+    wrap.id = 'after_video';
+
+    var parent = document.createElement('div');
+    parent.className = 'overlay-parent';
+
+    var close = document.createElement('span');
+    close.className = 'overlay-close';
+    close.dataset.id = topic;
+    close.appendChild(document.createTextNode('x'));
+
+    var video = document.createElement('video');
+    video.id = currentModuleName.replace(/ /g,"_")+'_vid';
+    video.controls = true;
+    video.style.width = '100%';
+
+    var source = document.createElement('source');
+    source.type = 'video/mp4';
+    source.media = 'all and (min-width: 481px)';
+    source.src = obj.after_video_url;
+
+    var source1 = document.createElement('source');
+    source1.type = 'video/mp4';
+    source1.media = 'all and (max-width: 480px)';
+    source1.src = obj.after_video_url_small;
+
+    video.appendChild(source);
+    video.appendChild(source1);
+
+    var content = document.createElement('div');
+    content.className = 'overlay-content';
+    content.appendChild(video);
+
+    parent.appendChild(close);
+    parent.appendChild(content);
+    wrap.appendChild(parent);
+
+    var videoId = currentModuleName.replace(/ /g,"_")+'_vid';
+
+    $('body').append(wrap);
+
+    document.getElementById(videoId).play();    
+}
+
+$(document).on('click', '#before_video.overlay-wrap .overlay-close', function() {
     $('.overlay-wrap').remove();
+});
+
+$(document).on('click', '#after_video.overlay-wrap .overlay-close', function() {
+    $('.overlay-wrap').remove();
+    var obj = getIndexObjFromMenu($(this).attr('data-id') , null);
+    navigateToIndex(obj);
 });
 
 function showHideNavButtons(index) {
