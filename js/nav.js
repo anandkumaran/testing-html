@@ -100,6 +100,16 @@ var firstTime = true;
 
 function handlePostTestNavigation(direction) {
     if(reviewQn) {
+        if($('.post-test-quiz .qn-block').attr('data-multi') == 'true') {
+            for(var i=0;i<$('.post-test-quiz .qn-block .checked').length;i++) {
+                review.push($('.post-test-quiz .qn-block .checked').eq(i).find('input').attr('value'))
+            }
+            wholeReview.push(review)
+            scormAdaptor_setreview(wholeReview)
+        } else {
+            wholeReview.push($('.post-test-quiz .qn-block .checked').find('input').attr('value'))
+            scormAdaptor_setreview(wholeReview)
+        }
         clearTimeout(clearTime);
     }
     /*console.log("Loading question "+ currentPostQn);
@@ -137,7 +147,11 @@ function handlePostTestNavigation(direction) {
         } else {
             $('.nav-pre, .nav-next').hide();
         }
-        
+        if(reviewQn && previousQn == currentPostQn) {
+            currentPostQn++
+            console.log('if')
+        }
+        console.log('currentPostQn ', previousQn, currentPostQn)
         if (currentPostQn == null ) {
             $('.nav-next').css({ "display": "none" });
             swal({
@@ -162,6 +176,7 @@ function handlePostTestNavigation(direction) {
               });
             return false
         }
+
 
         $(".content").css({ 'opacity': '0' });
 

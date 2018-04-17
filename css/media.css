@@ -187,6 +187,18 @@
     }
 }
 @media all and (min-width: 480px) and (max-width: 767px) {
+    .content {
+        margin-bottom: 30px;
+    }
+    .post-test-quiz .form {
+        margin-bottom: 30px;
+    }
+    .post-test-quiz .form .qn-block .radio {
+        padding: 10px;
+    }
+    .post-test-quiz .resultBlock {
+        padding: 8px;
+    }
     .creditLine {
         /*     color: #ffffff;
     position: absolute;
@@ -358,6 +370,18 @@
 }
 
 @media all and (max-width: 480px) and (orientation:portrait) {
+     .content {
+        margin-bottom: 30px;
+    }
+    .post-test-quiz .form .qn-block .radio {
+        padding: 10px;
+    }
+    .post-test-quiz .form {
+        margin-bottom: 30px;
+    }
+    .post-test-quiz .resultBlock {
+        padding: 8px;
+    }
     .overlay-wrap .overlay-parent {
         top: 31%;
         width: 92%;

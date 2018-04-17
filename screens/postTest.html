@@ -10,23 +10,19 @@
 </div>
 </div>
 <script type="text/javascript">
-var qn = 0, clearTime = false;
+var qn = 0, clearTime = false, previousQn =0;
 var totalQns = postQuizData.questions.length;
 $(document).on('click', '.post-test-quiz label.radio input', function () {
     qn = $('.post-test-quiz .qn-block').attr('data-id');
     qn = parseInt(qn)
-    $('input:not(:checked)').parent().removeClass("checked");
-    
-    if(!$(this).attr('checked')) {
+    if($(this).prop('checked')) {
         $(this).parent().addClass("checked");
         $(this).attr('checked', true)
-    } else {
-        $(this).parent().removeClass("checked");
-        $(this).attr('checked', false)
     }
+
+    $('input:not(:checked)').parent().removeClass("checked");
     
     postTstQnDone = true
-
     if(postQuizData.questions[qn].multi) {
         if($('.qn-block input:checked').length == postQuizData.questions[0].correct.length) {
             $('.post-test-quiz .form label.radio input:not(:checked)').addClass('disable');
@@ -35,7 +31,6 @@ $(document).on('click', '.post-test-quiz label.radio input', function () {
                 validatePostAns();
             } else if($(this).parent().parent().attr('data-id') < totalQns) {
                 qn = qn +1;
-                currentPostQn = qn
                 clearTime = setTimeout(function() {
                     validatePostAns();
                     populateQuestion(qn)
@@ -55,13 +50,14 @@ $(document).on('click', '.post-test-quiz label.radio input', function () {
             validatePostAns();
         } else if($(this).parent().parent().attr('data-id') < totalQns) {
             qn = qn +1;
-            currentPostQn = qn
             clearTime = setTimeout(function() {
                 validatePostAns();
                 populateQuestion(qn)
             }, 500)
-        }   
+        } 
     }
+    currentPostQn = previousQn = qn
+    console.log('currentPostQn ', currentPostQn)
 });
 
 </script>

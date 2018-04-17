@@ -1235,7 +1235,6 @@ var review = [], wholeReview = [];
         if(postQuizData.questions[i].multi) {
           for (var i = 0; i < radios.length; i++) {
             if (radios[i].checked) {
-              console.log(radios[i].length)
               review.push(radios[i].value)
             }
           }
@@ -1249,7 +1248,9 @@ var review = [], wholeReview = [];
         }
         
           scormAdaptor_setreview(wholeReview)
-          scormAdaptor_setRecalreview(wholeReview)
+          if(!reviewQn){
+            scormAdaptor_setRecalreview(wholeReview)
+          }
 
         var infoObj = checkPostTestAns(key, value);
         // if (infoObj.attempted == false) {
@@ -1511,9 +1512,15 @@ var review = [], wholeReview = [];
       if(currentPostQn == null) {
         currentPostQn = 0
       }
+        previousQn = currentPostQn
+      console.log(wholeReview)
+      if(wholeReview != '') {
+        scormAdaptor_setRecalreview(wholeReview)
+      }
       populateQuestion(currentPostQn);
-      console.log('currentPostQn ', currentPostQn)
       currentPostQn++
+      review = []
+      wholeReview = []
       scormAdaptor_setreview(null)
       $('.finishPara').hide();
     }
@@ -1521,6 +1528,7 @@ var review = [], wholeReview = [];
     /*------------- Popup box Post Test Operations ---------------------*/
 
     function showFinalScore() {
+      scormAdaptor_setRecalreview(wholeReview)
       $('#menu-ul li.selected').addClass('completed')
       $('#menu-ul li.selected').find('.ani-progress').animate({'width':'100%'},400)
       $('#menu-ul li.selected').find('span').animate({'left':'86%'},400).text('100%');
@@ -1573,6 +1581,8 @@ var review = [], wholeReview = [];
         console.log(answers)
 
         $('.post-test-quiz').find('.form').empty();
+        $('.post-test-quiz .form').append('<p>Total answered ' + postQnAnsObj.totalScore + ' Out of '+ outOf +'\n and Total scored in % '+ scormAdaptor_getscore("_score"));
+
         var id, question = '', options = '', qnStr ='', rational ='', ans='';
         for(var i=0;i<postQuizData.questions.length;i++) {
           id = postQuizData.questions[i].id;
@@ -1595,12 +1605,12 @@ var review = [], wholeReview = [];
             ans += '<li>'+postQuizData.questions[i].choices[postQuizData.questions[i].correct[j]] +'</li>';
           }
         } else {
-          ans = postQuizData.questions[i].choices[postQuizData.questions[i].correct];
+          ans = '<li>'+postQuizData.questions[i].choices[postQuizData.questions[i].correct]+'</li>';
         }
 
-        rational = '<p><strong>Rational:</strong> '+postQuizData.questions[i].rational+'</p>'
-        $('.post-test-quiz .form').append('<div class="qn-block">'+qnStr + optionsStr+ '</div>' +'<div class="resultBlock" style="display:block"><div><strong>Answer:</strong> <ul>'+ans+'</ul> </div>' + rational+'</div>');
-        $('.post-test-quiz .form').addClass('final-score');
+        rational = '<p><strong>Rational: </strong> '+postQuizData.questions[i].rational+'</p>'
+        $('.post-test-quiz .form').append('<div class="qn-block">'+qnStr + optionsStr+ '</div>' +'<div class="resultBlock" style="display:block"><div><strong>Answer: </strong> <ul>'+ans+'</ul> </div>' + rational+'</div>');
+
         if(postQuizData.questions[i].multi) {
             for(var j=0;j<answers[i].length;j++) {
               $('.post-test-quiz .qn-block #qn_'+i+answers[i][j]).append('<span class="glyphicon glyphicon-remove incorrectMsg"></span>')
@@ -1615,6 +1625,10 @@ var review = [], wholeReview = [];
         }
 
       }
+
+        $('.post-test-quiz .form').addClass('final-score');
+
+        $('.final-score').append('<input type="submit" value="Finish" onclick="handleWindowClose()" class="finishTest"/>')
          
 				postQnAnsObj.completedTest = true;
         console.log('Total scored in %', scormAdaptor_getscore('_score'))

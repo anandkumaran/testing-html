@@ -293,6 +293,7 @@ cursor: pointer;
     visibility: hidden;
 }
 .post-test-quiz .form .radio input {
+	display: none;
 	visibility: hidden;
 }
 .post-test-quiz .form .radio.disable {
@@ -736,6 +737,7 @@ vertical-align:middle;
 }
 .non-fixed .content-right-panel .content {
 	padding-bottom: 0;
+	margin-bottom: 0;
 	min-height: 98vh;
 }
 .non-fixed .intro-image {
