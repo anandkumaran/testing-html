@@ -277,7 +277,7 @@ window.onload = function () {
     isMobileAndLandscape = checkIfMobileAndLandscape();
 
     if(isMobileAndPortrait || isMobileAndLandscape) {
-      $('.mobile-disable, .menu-bar .menu-icon').hide();
+      // $('.mobile-disable, .menu-bar .menu-icon').hide();
       $('#rowcontent').on('touchstart touchmove', function() {
         $('.container.wrapper').addClass('non-fixed');
         $('.menu-wrap2').removeClass('menu-show2');
@@ -320,7 +320,17 @@ window.onload = function () {
 
   function loadHomePage() {
     $(".content").load("screens/welcome.html").attr('id', 'page_num_0');
-    $(".navigation").load("screens/nav.html");
+    $(".navigation").load("screens/nav.html", function() {
+      if(menuData.modules[0].video_icon_footer) {
+        setTimeout(function() {
+          $('#nav-video').removeClass('hide');
+        }, 2000);
+        loadBetweenVideo(menuData.modules[0])
+      } else {
+        $('#nav-video').addClass('hide');
+      }
+    });
+    
 	//$(".navigation").html('<ul id="menu-ul"></ul>');
 	// var div = document.createElement('p');
 	// div.className = 'test';
@@ -1515,6 +1525,7 @@ var review = [], wholeReview = [];
       if(currentPostQn == null) {
         currentPostQn = 0
       }
+      currentPostQn = 0;
         previousQn = currentPostQn
       console.log(wholeReview)
       if(wholeReview != '') {
@@ -1631,7 +1642,7 @@ var review = [], wholeReview = [];
 
         $('.post-test-quiz .form').addClass('final-score');
 
-        $('.final-score').append('<input type="submit" value="Finish" onclick="handleWindowClose()" class="finishTest"/>')
+        $('.final-score').append('<div class="text-center"><input type="submit" value="Finish" onclick="handleWindowClose()" class="finishTest"/></div>')
          
 				postQnAnsObj.completedTest = true;
         console.log('Total scored in %', scormAdaptor_getscore('_score'))

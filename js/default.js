@@ -42,9 +42,9 @@ var setMaxScore = 100;
 /*Pre-test keys*/
 var pretestKey = [
 				 {"id":"q1","key":"1"},
-				 {"id":"q2","key":"0"},
-				 {"id":"q3","key":"2"},
-				 {"id":"q4","key":"0"}
+				 {"id":"q2","key":"1"}
+				// {"id":"q3","key":"2"},
+				 //{"id":"q4","key":"0"}
 				 // {"id":"q5","key":"3"},
 				 // {"id":"q6","key":"4"},
 				 // {"id":"q7","key":"2"},

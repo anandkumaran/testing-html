@@ -1,53 +1,28 @@
 {
   "questions": [{
-    "question": "1. In the event of a fire in your work area, your best course of action is to:",
+    "question": "1. What is pharmacodynamics?",
     "id": "q1",
     "choices": [
-      "a) Attempt to fight the fire and rescue others",
-      "b) Leave the work area, using a designated escape route",
-      "c) Shelter in a room without windows",
-      "d) d Shelter in a room without windows"
+      "a) It is the production of drugs as per the safety rules",
+      "b) It is the study of how a dug affects an organism",
+      "c) It refers to compounds manufactured for use as a medicinal drug",
+      "d) It is the term for using medication to treat a disease"
     ],
-    "correct": [1,2],
+    "correct": 1,
     "rational": "Leave the work area, using a designated escape route as you should first move towards to a safe area in the case of a fire.",
-    "multi": true
+    "multi": false
   },
   {
-    "question": "2. True or False question?",
+    "question": "2. The Thalidomide disaster was a drug marketed for cold medication.",
     "id": "q2",
     "choices": [
       "True",
       "False"
     ],
-    "correct": 0,
-    "rational": "A source of ignition, oxygen and fuel is needed to start a fire.",
-    "multi": false
-  },
-  {
-    "question": "3. To encourage compassion among colleagues one should:",
-    "id": "q3",
-    "choices": [
-      "a) Challenge negative behaviour",
-      "b) Only consider one&rsquo;s own perspective",
-      "c) Ignore students and bank staff",
-      "d) Tell others what to do"
-    ],
-    "correct": 3,
-    "rational": "Tell others what to do",
-    "multi": false
-  },
-  {
-    "question": "4. What are the three basic ingredients needed to start a fire?",
-    "id": "q4",
-    "choices": [
-      "a) A source of ignition, oxygen and fuel",
-      "b) Gasoline, matches and paper",
-      "c) Hydrogen, oxygen and flames",
-      "d) Withholding information"
-    ],
-    "correct": 0,
+    "correct": 1,
     "rational": "A source of ignition, oxygen and fuel is needed to start a fire.",
     "multi": false
   }
+
 ]
 }

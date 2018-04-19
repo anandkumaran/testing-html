@@ -25,6 +25,7 @@ $(document).on('click', '.post-test-quiz label.radio input', function () {
     postTstQnDone = true
     if(postQuizData.questions[qn].multi) {
         if($('.qn-block input:checked').length == postQuizData.questions[0].correct.length) {
+            $('.nav-next').show();
             $('.post-test-quiz .form label.radio input:not(:checked)').addClass('disable');
             $('.post-test-quiz .form label.radio input:not(:checked)').attr('disabled', true)
             if($(this).parent().parent().attr('data-id') == totalQns-1) {
@@ -34,14 +35,16 @@ $(document).on('click', '.post-test-quiz label.radio input', function () {
                 clearTime = setTimeout(function() {
                     validatePostAns();
                     populateQuestion(qn)
-                }, 2000)
+                }, 1000)
             } 
         } else if($('.qn-block input:checked').length > postQuizData.questions[0].correct.length) {
+            $('.nav-next').hide()
             $(this).parent().parent().find('input:checked').attr('checked', false)
             $(this).parent().parent().find('.checked').removeClass('checked')
         }else {
             $('.post-test-quiz .form label.radio input').attr('disabled', false)
             $('.post-test-quiz .form label.radio').removeClass('disable'); 
+            $('.nav-next').hide()
         }
     } else {   
         $('.post-test-quiz .form label.radio').addClass('disable'); 
@@ -53,11 +56,10 @@ $(document).on('click', '.post-test-quiz label.radio input', function () {
             clearTime = setTimeout(function() {
                 validatePostAns();
                 populateQuestion(qn)
-            }, 2000)
+            }, 1000)
         } 
     }
     currentPostQn = previousQn = qn
-    console.log('currentPostQn ', currentPostQn)
 });
 
 </script>

@@ -13,22 +13,31 @@
 		"video_url_small": "videos/video1_360px.mp4",
 		"after_overlay": false,
 		"after_video_url": "videos/video1_1080px.mp4",
-		"after_video_url_small": "videos/video1_360px.mp4"
+		"after_video_url_small": "videos/video1_360px.mp4",
+		"video_btn_html": false,
+		"video_icon_footer": true,
+		"between_video_url": "videos/video1_1080px.mp4",
+		"between_video_url_small": "videos/video1_360px.mp4"
 	},
 	
 	{
 		"module":"Learning Objectives",
-		"url":"screens/intro.html",
+		"url":"screens/Learning_Objectives.html",
 		"id":1,
 		"topics":[
 		],
-		"audio": false,
+		"audio": true,
+		"audio_url": "audio/Learning_Objectives.mp3",
 		"overlay": false,
 		"video_url": "videos/video1_1080px.mp4",
 		"video_url_small": "videos/video1_360px.mp4",
-		"after_overlay": true,
+		"after_overlay": false,
 		"after_video_url": "videos/video1_1080px.mp4",
-		"after_video_url_small": "videos/video1_360px.mp4"
+		"after_video_url_small": "videos/video1_360px.mp4",
+		"video_btn_html": false,
+		"video_icon_footer": false,
+		"between_video_url": "videos/video1_1080px.mp4",
+		"between_video_url_small": "videos/video1_360px.mp4"
 	},
 	{
 		"module":"Pre-test",
@@ -36,72 +45,155 @@
 		"id":2,
 		"topics":[
 		],
-		"audio": true,
+		"audio": false,
 		"audio_url": "audio/Narrator.mp3",
 		"overlay": false,
 		"video_url": "videos/video1_1080px.mp4",
 		"video_url_small": "videos/video1_360px.mp4",
 		"after_overlay": false,
 		"after_video_url": "videos/video1_1080px.mp4",
-		"after_video_url_small": "videos/video1_360px.mp4"
+		"after_video_url_small": "videos/video1_360px.mp4",
+		"video_btn_html": false,
+		"video_icon_footer": false,
+		"between_video_url": "videos/video1_1080px.mp4",
+		"between_video_url_small": "videos/video1_360px.mp4"
 	},
 		{
-		"module":"Importance of Fire Safety of the health",
-		"url":"screens/acronyms.html",
+		"module":"Drugs",
+		"url":"screens/Drugs.html",
 		"id":3,
 		"topics":[
 		],
-		"audio": false,
-		"overlay": true,
+		"audio": true,
+		"audio_url": "audio/Drugs.mp3",
+		"overlay": false,
 		"video_url": "videos/video1_1080px.mp4",
 		"video_url_small": "videos/video1_360px.mp4",
 		"after_overlay": false,
 		"after_video_url": "videos/video1_1080px.mp4",
-		"after_video_url_small": "videos/video1_360px.mp4"
+		"after_video_url_small": "videos/video1_360px.mp4",
+		"video_btn_html": false,
+		"video_icon_footer": false,
+		"between_video_url": "videos/video1_1080px.mp4",
+		"between_video_url_small": "videos/video1_360px.mp4"
 	},
 	
 	{
-		"module":"Causes of Fire",
-		"url":"screens/references.html",
+		"module":"Definitions",
+		"url":"screens/Definitions.html",
 		"id":4,
 		"topics":[
 		],
 		"audio": true,
-		"audio_url": "audio/FireSafety2.mp3",
+		"audio_url": "audio/Definitions.mp3",
 		"overlay": false,
 		"video_url": "videos/video1_1080px.mp4",
 		"video_url_small": "videos/video1_360px.mp4",
 		"after_overlay": false,
 		"after_video_url": "videos/video1_1080px.mp4",
-		"after_video_url_small": "videos/video1_360px.mp4"
+		"after_video_url_small": "videos/video1_360px.mp4",
+		"video_btn_html": false,
+		"video_icon_footer": false,
+		"between_video_url": "videos/video1_1080px.mp4",
+		"between_video_url_small": "videos/video1_360px.mp4"
 	},
 	{
-		"module":"Fire Tetrahedron",
-		"url":"screens/references1.html",
+		"module":"Pharmacodynamic effects",
+		"url":"screens/Pharmacodynamic_effects.html",
 		"id":5,
 		"topics":[
 		],
-		"audio": false,
+		"audio": true,
+		"audio_url": "audio/Pharmacodynamic_effects.mp3",
 		"overlay": false,
 		"video_url": "videos/video1_1080px.mp4",
 		"video_url_small": "videos/video1_360px.mp4",
 		"after_overlay": false,
 		"after_video_url": "videos/video1_1080px.mp4",
-		"after_video_url_small": "videos/video1_360px.mp4"
+		"after_video_url_small": "videos/video1_360px.mp4",
+		"video_btn_html": false,
+		"video_icon_footer": false,
+		"between_video_url": "videos/video1_1080px.mp4",
+		"between_video_url_small": "videos/video1_360px.mp4"
 	},
 	{
-		"module":"Types of Fire",
-		"url":"screens/references2.html",
+		"module":"Rawlin and Thomson Classification",
+		"url":"screens/Rawlin_and_Thomson_Classification.html",
 		"id":6,
 		"topics":[
 		],
-		"audio": false,
+		"audio": true,
+		"audio_url": "audio/Rawlin_and_Thomson_Classification.mp3",
 		"overlay": false,
 		"video_url": "videos/video1_1080px.mp4",
 		"video_url_small": "videos/video1_360px.mp4",
 		"after_overlay": false,
 		"after_video_url": "videos/video1_1080px.mp4",
-		"after_video_url_small": "videos/video1_360px.mp4"
+		"after_video_url_small": "videos/video1_360px.mp4",
+		"video_btn_html": false,
+		"video_icon_footer": false,
+		"between_video_url": "videos/video1_1080px.mp4",
+		"between_video_url_small": "videos/video1_360px.mp4"
+	},
+	
+	{
+		"module":"Prevention of Adverse Effects to Drugs",
+		"url":"screens/Prevention_of_Adverse_Effects_to_Drugs.html",
+		"id":7,
+		"topics":[
+		],
+		"audio": true,
+		"audio_url": "audio/Prevention_of_Adverse_Effects_to_Drugs.mp3",
+		"overlay": false,
+		"video_url": "videos/video1_1080px.mp4",
+		"video_url_small": "videos/video1_360px.mp4",
+		"after_overlay": false,
+		"after_video_url": "videos/video1_1080px.mp4",
+		"after_video_url_small": "videos/video1_360px.mp4",
+		"video_btn_html": false,
+		"video_icon_footer": false,
+		"between_video_url": "videos/video1_1080px.mp4",
+		"between_video_url_small": "videos/video1_360px.mp4"
+	},
+	
+	{
+		"module":"What is Pharmacovigilance",
+		"url":"screens/What_is_pharmacovigilance.html",
+		"id":8,
+		"topics":[
+		],
+		"audio": true,
+		"audio_url": "audio/What_is_pharmacovigilance.mp3",
+		"overlay": false,
+		"video_url": "videos/video1_1080px.mp4",
+		"video_url_small": "videos/video1_360px.mp4",
+		"after_overlay": false,
+		"after_video_url": "videos/video1_1080px.mp4",
+		"after_video_url_small": "videos/video1_360px.mp4",
+		"video_btn_html": false,
+		"video_icon_footer": false,
+		"between_video_url": "videos/video1_1080px.mp4",
+		"between_video_url_small": "videos/video1_360px.mp4"
+	},
+	
+		{
+		"module":"Summary",
+		"url":"screens/Summary.html",
+		"id":9,
+		"topics":[
+		],
+		"audio": true,
+		"audio_url": "audio/Summary.mp3",
+		"overlay": false,
+		"video_url": "videos/video1_1080px.mp4",
+		"video_url_small": "videos/video1_360px.mp4",
+		"after_overlay": false,
+		"after_video_url": "videos/video1_1080px.mp4",
+		"after_video_url_small": "videos/video1_360px.mp4",
+		"video_btn_html": false,
+		"video_icon_footer": false,
+		"between_video_url": "videos/video1_1080px.mp4",
+		"between_video_url_small": "videos/video1_360px.mp4"
 	},
 	
 	{
@@ -116,7 +208,11 @@
 		"video_url_small": "videos/video1_360px.mp4",
 		"after_overlay": false,
 		"after_video_url": "videos/video1_1080px.mp4",
-		"after_video_url_small": "videos/video1_360px.mp4"
+		"after_video_url_small": "videos/video1_360px.mp4",
+		"video_btn_html": false,
+		"video_icon_footer": false,
+		"between_video_url": "videos/video1_1080px.mp4",
+		"between_video_url_small": "videos/video1_360px.mp4"
 	}
    ]
 }

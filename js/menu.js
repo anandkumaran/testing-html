@@ -233,7 +233,7 @@ function prepareList() {
                 $('#'+str+'_ani').animate({'width': '100%'}, 500);
                 $('#'+str+'_span').animate({'left':'86%'}, 500).text('100%');
             }
-        }        
+        }
 
         if(event.target.firstChild.textContent){
           if(checkValidModulePage(event.target.firstChild.textContent) || (event.target.firstChild.textContent == "Learning Points")){
@@ -280,6 +280,19 @@ function prepareList() {
                     loadAfterVideo(menuData.modules[currentId], event.target.firstChild.textContent)
                 } else {
                     navigateToIndex(obj);
+                }
+
+                if(menuData.modules[_index].video_icon_footer) {
+                    setTimeout(function() {
+                        $('#nav-video').removeClass('hide');
+                    }, 2000)
+                    loadBetweenVideo(menuData.modules[_index])
+                  } else {
+                    $('#nav-video').addClass('hide');
+                  }
+
+                if(menuData.modules[currentId].video_btn_html) {
+                    loadBetweenVideo(menuData.modules[currentId])
                 }
                 
                 if(checkIfMobileAndPortrait()){
@@ -370,6 +383,19 @@ function prepareList() {
                     loadAfterVideo(menuData.modules[currentId], event.target.firstChild.textContent)
                 } else {
                     navigateToIndex(obj);
+                }
+                
+                if(menuData.modules[currentId].video_icon_footer) {
+                    setTimeout(function() {
+                        $('#nav-video').removeClass('hide');
+                    }, 2000)
+                    loadBetweenVideo(menuData.modules[currentId])
+                  } else {
+                    $('#nav-video').addClass('hide');
+                  }
+
+                if(menuData.modules[currentId].video_btn_html) {
+                    loadBetweenVideo(menuData.modules[currentId])
                 }
                 
                 if(checkIfMobileAndPortrait()){

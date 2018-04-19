@@ -93,6 +93,15 @@ function handleNavigation(direction) {
             navigateToIndex(obj);
         }
 
+        if(menuData.modules[currentId].video_icon_footer) {
+            setTimeout(function() {
+                $('#nav-video').removeClass('hide');
+            }, 2000);
+            loadBetweenVideo(menuData.modules[currentId])
+          } else {
+            $('#nav-video').addClass('hide');
+          }
+
         //highlightNextNode(str,direction);
 
     } else {
@@ -151,12 +160,11 @@ function handlePostTestNavigation(direction) {
         } else {
             $('.nav-pre, .nav-next').hide();
         }
-        if(reviewQn && previousQn == currentPostQn) {
+        if(reviewQn && previousQn == currentPostQn && currentPostQn != (postQuizData.questions.length-1) && currentPostQn !=null) {
             currentPostQn++
-            console.log('if')
         }
-        console.log('currentPostQn ', previousQn, currentPostQn)
-        if (currentPostQn == null ) {
+
+        if (currentPostQn == null) {
             $('.nav-next').css({ "display": "none" });
             swal({
                   title: "You have completed your Post-Test", 
@@ -187,8 +195,8 @@ function handlePostTestNavigation(direction) {
         $(".content").load('screens/postQzTemplate.html', function(responseTxt, statusTxt, xhr) {
             if (statusTxt == "success") {
                 $(this).find('.qn-block').empty();
-                populateQuestion(currentPostQn);
                 postTstQnDone = false;
+                    populateQuestion(currentPostQn);
                 if (currentPostQn == (postQuizData.questions.length - 1)) {
                     
                     //This will end loading questions
@@ -198,6 +206,7 @@ function handlePostTestNavigation(direction) {
                     currentPostQn++;
 					$(".main-content").scrollTop(0);
                 }
+                // previousQn = currentPostQn
 
             }
             if (statusTxt == "error")
@@ -242,13 +251,17 @@ function disableMenuAndNavButtons() {
     });
 }
 
+var recal;
 function populateQuestion(qn) {
     var question = postQuizData.questions[qn].question;
     var id = postQuizData.questions[qn].id;
     var optionsStr = '';
     var options = postQuizData.questions[qn].choices;
     var choiceLen = postQuizData.questions[qn].correct.length;
-    var recal = scormAdaptor_getRecalreview();
+    
+    if(recal!=undefined || recal!='') {
+        recal = scormAdaptor_getRecalreview();
+    }
     $.each(options, function(key, value) {
         if(postQuizData.questions[qn].multi) {
                 optionsStr += '<label class="radio"><input id="qn_'+key+'" value="' + key + '" type="checkbox" name="' + id + '">' + value + '</label>';
@@ -327,6 +340,7 @@ var previousTopicIndex = null;
 var previousUrl = null;
 
 function navigateToIndex(obj) {
+    $('#nav-video').addClass('hide')
     //resetting navigation & postTest flags
     navigationFlag = false;
     postTestStart = false;
@@ -361,6 +375,33 @@ function navigateToIndex(obj) {
                     }
 
                     showHideNavButtons(currentIndex);
+
+                    if(menuData.modules[currentIndex].video_icon_footer) {
+                        setTimeout(function() {
+                            $('#nav-video').removeClass('hide');
+                        }, 2000);
+                        loadBetweenVideo(menuData.modules[currentIndex])
+                      } else {
+                        $('#nav-video').addClass('hide');
+                      }
+
+                    // var video_btn_wrap = document.createElement('div');
+                    // video_btn_wrap.className = 'video_btn_wrap text-right';
+
+                    // var video_btn = document.createElement('a');
+                    // video_btn.id = 'video_btn';
+                    // video_btn.append(document.createTextNode('Play Video'));
+                    // video_btn.setAttribute('href', 'javascript:;');
+
+                    // video_btn_wrap.append(video_btn);
+
+                    if(menuData.modules[currentIndex].video_btn_html) {
+                        $('.content .video_btn_wrap').removeClass('hide');
+                        loadBetweenVideo(menuData.modules[currentIndex])
+                      } else {
+                        $('.content .video_btn_wrap').addClass('hide');
+                      }
+
                     if (currentModuleName == "Post-Test" || currentModuleName == "Post-test") {
                         postTestStart = true;
                     }
@@ -453,6 +494,53 @@ function loadVideo(obj) {
 }
 
 
+function loadBetweenVideo(obj) {
+    $('#between_video').remove()
+    var wrap = document.createElement('div');
+    wrap.className = 'overlay-wrap hide';
+    wrap.id = 'between_video';
+
+    var parent = document.createElement('div');
+    parent.className = 'overlay-parent';
+
+    var close = document.createElement('span');
+    close.className = 'overlay-close';
+    close.appendChild(document.createTextNode('x'));
+
+    var video = document.createElement('video');
+    video.id = currentModuleName.replace(/ /g,"_")+'_vid';
+    video.controls = true;
+    video.style.width = '100%';
+
+    var source = document.createElement('source');
+    source.type = 'video/mp4';
+    source.media = 'all and (min-width: 481px)';
+    source.src = obj.between_video_url;
+
+    var source1 = document.createElement('source');
+    source1.type = 'video/mp4';
+    source1.media = 'all and (max-width: 480px)';
+    source1.src = obj.between_video_url_small;
+
+    video.appendChild(source);
+    video.appendChild(source1);
+
+    var content = document.createElement('div');
+    content.className = 'overlay-content';
+    content.appendChild(video);
+
+    parent.appendChild(close);
+    parent.appendChild(content);
+    wrap.appendChild(parent);
+
+    var videoId = currentModuleName.replace(/ /g,"_")+'_vid';
+
+    $('body').append(wrap);
+
+    // document.getElementById(videoId).play();    
+}
+
+
 function loadAfterVideo(obj, topic) {
     var wrap = document.createElement('div');
     wrap.className = 'overlay-wrap';
@@ -499,12 +587,25 @@ function loadAfterVideo(obj, topic) {
     document.getElementById(videoId).play();    
 }
 
+$(document).on('click', '#nav-video, #video_btn', function() {
+    $('#between_video').removeClass('hide');
+    var videoId = $('#between_video').find('video').attr('id')
+    document.getElementById(videoId).play();
+});
+
+$(document).on('click', '#between_video.overlay-wrap .overlay-close', function() {
+    $('#between_video').addClass('hide');
+    var videoId = $('#between_video').find('video').attr('id')
+    document.getElementById(videoId).currentTime = 0;
+    document.getElementById(videoId).pause();
+});
+
 $(document).on('click', '#before_video.overlay-wrap .overlay-close', function() {
-    $('.overlay-wrap').remove();
+    $('#before_video').remove();
 });
 
 $(document).on('click', '#after_video.overlay-wrap .overlay-close', function() {
-    $('.overlay-wrap').remove();
+    $('#after_video').remove();
     var obj = getIndexObjFromMenu($(this).attr('data-id') , null);
     navigateToIndex(obj);
 });

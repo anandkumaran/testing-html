@@ -6,9 +6,9 @@
 </metadata>
 <organizations default="lo_0001">
 <organization identifier="lo_0001" structure="hierarchical">
-<title>Fire Safety</title>
+<title>ADVERSE REACTION TO DRUGS</title>
 <item identifier="Page1" identifierref="Page1Res" isvisible="true">
-<title>Fire Safety</title>
+<title>ADVERSE REACTION TO DRUGS</title>
 <!--<adlcp:masteryscore>80</adlcp:masteryscore>-->
 </item>
 </organization>
@@ -82,19 +82,19 @@
 <resource identifier="RES-DC90EA9D62C3E5997464775F6EFC3F58" type="webcontent" href="js/nav.js"><file href="js/nav.js" /></resource>
 <resource identifier="RES-6D5F0C5F8CA044D9C94F0F43074F46AC" type="webcontent" href="js/scorm_adaptor.js"><file href="js/scorm_adaptor.js" /></resource>
 <resource identifier="RES-BBBC4003A1481A101938CFC6C727476C" type="webcontent" href="screens/welcome.html"><file href="screens/welcome.html" /></resource>
-<resource identifier="RES-55CC0121D1B4529BB59E22D3F1EABAB2" type="webcontent" href="screens/acronyms.html"><file href="screens/acronyms.html" /></resource>
+<resource identifier="RES-55CC0121D1B4529BB59E22D3F1EABAB2" type="webcontent" href="screens/Drugs.html"><file href="screens/Drugs.html" /></resource>
 <resource identifier="RES-4A095EA68B6E0ED12DD2CA017E3BCC06" type="webcontent" href="screens/glossary.html"><file href="screens/glossary.html" /></resource>
-<resource identifier="RES-84F9597412779349D3CFA76E43200B01" type="webcontent" href="screens/intro.html"><file href="screens/intro.html" /></resource>
+<resource identifier="RES-84F9597412779349D3CFA76E43200B01" type="webcontent" href="screens/Learning_Objectives.html"><file href="screens/Learning_Objectives.html" /></resource>
 <resource identifier="RES-4C4C1A6FF871BF4074D525BFD1BCA610" type="webcontent" href="screens/menu.html"><file href="screens/menu.html" /></resource>
 <resource identifier="RES-CCD5FD060EFE1401AACEB8396213F7D2" type="webcontent" href="screens/nav.html"><file href="screens/nav.html" /></resource>
 <resource identifier="RES-BF7A015C19B797A8FF4192C141CC7285" type="webcontent" href="screens/postQzTemplate.html"><file href="screens/postQzTemplate.html" /></resource>
 <resource identifier="RES-5EA0B4BB9A85A85C918F94F5A1715BD2" type="webcontent" href="screens/postTest.html"><file href="screens/postTest.html" /></resource>
 <resource identifier="RES-33E403F75207AEC0CEF6A0A63FDECF35" type="webcontent" href="screens/pretest.html"><file href="screens/pretest.html" /></resource>
-<resource identifier="RES-9D31C7CC65202AB9D9AD14AE0C01BAEC" type="webcontent" href="screens/references.html"><file href="screens/references.html" /></resource>
-<resource identifier="RES-E4BF07D81282A1331DFD680BE7DA80CD" type="webcontent" href="screens/references1.html"><file href="screens/references1.html" /></resource>
-<resource identifier="RES-BBBC4003A1481A101938CFC6C727476B" type="webcontent" href="screens/references2.html"><file href="screens/references2.html" /></resource>
-<resource identifier="RES-5526E84A97989027DBF3F30014E0CB5C" type="webcontent" href="screens/references3.html"><file href="screens/references3.html" /></resource>
-<resource identifier="RES-5526E84A97989027DBF3F30014E0CB5D" type="webcontent" href="screens/references4.html"><file href="screens/references4.html" /></resource>
+<resource identifier="RES-9D31C7CC65202AB9D9AD14AE0C01BAEC" type="webcontent" href="screens/Definitions.html"><file href="screens/Definitions.html" /></resource>
+<resource identifier="RES-E4BF07D81282A1331DFD680BE7DA80CD" type="webcontent" href="screens/Pharmacodynamic_effects.html"><file href="screens/Pharmacodynamic_effects.html" /></resource>
+<resource identifier="RES-BBBC4003A1481A101938CFC6C727476B" type="webcontent" href="screens/Rawlin_and_Thomson_Classification.html"><file href="screens/Rawlin_and_Thomson_Classification.html" /></resource>
+<resource identifier="RES-5526E84A97989027DBF3F30014E0CB5C" type="webcontent" href="screens/Prevention_of_Adverse_Effects_to_Drugs.html"><file href="screens/Prevention_of_Adverse_Effects_to_Drugs.html" /></resource>
+<resource identifier="RES-5526E84A97989027DBF3F30014E0CB5D" type="webcontent" href="screens/What_is_pharmacovigilance.html"><file href="screens/What_is_pharmacovigilance.html" /></resource>
 <resource identifier="RES-8ADA2D0DB71F198BA3740F00C7C77641" type="webcontent" href="screens/summary.html"><file href="screens/summary.html" /></resource>
 <resource identifier="RES-E4BF07D81282A1331DFD680BE7DA80CE" type="webcontent" href="screens/learning-module/01_aims.html"><file href="screens/learning-module/01_aims.html" /></resource>
 <resource identifier="RES-8ADA2D0DB71F198BA3740F00C7C77642" type="webcontent" href="screens/learning-module/02_introduction.html"><file href="screens/learning-module/02_introduction.html" /></resource>

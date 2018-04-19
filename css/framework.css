@@ -14,13 +14,13 @@
 
 
 @font-face {
-    font-family: 'PT_Serif-Web-Bold';
-	src: url('../fonts/PT_Serif-Web-Bold.ttf');
+    font-family: 'century_gothic_bold';
+	src: url('../fonts/century_gothic_bold.ttf');
 	}
 
 @font-face {
-    font-family: 'PT_Serif-Web-Regular'; 
-	src: url('../fonts/PT_Serif-Web-Regular.ttf');
+    font-family: 'century_gothic'; 
+	src: url('../fonts/century_gothic.ttf');
 	}
 	
 
@@ -29,14 +29,14 @@ padding: 0;
 margin: 0;
 background-color: #ffffff;
 height: 100%;
-font-family: "PT_Serif-Web-Regular";
+font-family: "century_gothic";
 font-size: 13pt;
-color: #6A6A6A;
+color: #241f1f;
 -webkit-overflow-scrolling:touch
 }
 
 h1{
-	color: #005282;
+	color: #036259;
 	font-size: 18pt;
 }
 
@@ -47,7 +47,7 @@ h2{
 	border-color: 2px solid #730035;
 	padding: 7px 7px 7px 7px;
 	border-radius: 2px;
-	font-family:"PT_Serif-Web-Regular";
+	font-family:"century_gothic";
 	background-color: #cfe9f6;
 	
 	 /* Safari 4-5, Chrome 1-9 */
@@ -64,19 +64,19 @@ h2{
 
 h3{
 	font-size: 14pt;
-	font-family:"PT_Serif-Web-Regular";
+	font-family:"century_gothic";
 	
 }
 
 h4{
 	text-align: center;
-	font-family:"PT_Serif-Web-Regular";
+	font-family:"century_gothic";
 	font-size: 10pt;
 	
 }
 p{
 	/* color: #6A6A6A; */
-	font-family: "PT_Serif-Web-Regular";
+	font-family: "century_gothic";
 	text-align: justify;
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
@@ -94,7 +94,7 @@ ul {
 
 ul li{
 	
-	font-family: 'PT_Serif-Web-Regular';
+	font-family: 'century_gothic';
 	cursor: default;
 	padding: 5px 0;
 	/* list-style-type: disc;
@@ -107,7 +107,7 @@ ul li{
 
 ol li{
 	color: #6A6A6A;
-	font-family: 'PT_Serif-Web-Regular';
+	font-family: 'century_gothic';
 	cursor: default;
 	text-align: justify;
     margin-bottom: 5pt;
@@ -128,14 +128,14 @@ ol li{
 	list-style-type: circle;
 	margin-bottom: 5px;
 	color: #6A6A6A;
-	font-family: 'PT_Serif-Web-Regular';
+	font-family: 'century_gothic';
 }
 ul.whiteBgLi{
 	list-style-type: circle;
 	margin-bottom: 5pt;
 	color: #6A6A6A;
 	/* color: #000; */
-	font-family: 'PT_Serif-Web-Regular'; 
+	font-family: 'century_gothic'; 
 }
 .padLeft15{
 	padding-left: 15px;
@@ -146,7 +146,7 @@ ul.whiteBgLi{
     border: 2px solid #9a0d4b;
     background-color: #FFFFFF;
     color: #9a0d4b;
-    font-family: 'PT_Serif-Web-Regular'; 
+    font-family: 'century_gothic'; 
     margin-top: 3%;
     margin-bottom: 3%;
 	margin-left: 10%;
@@ -160,10 +160,10 @@ ul.whiteBgLi{
 }
 .definitions h3{ 
 		padding: 5px;
-		font-family: "OpenSans-Semibold";
+		font-family: "century_gothic_bold";
 		font-weight:100;
 }
-.definitions b, .timeout b, .timeoutln b{font-family: "PT_Serif-Web-Bold";font-weight:100;}
+.definitions b, .timeout b, .timeoutln b{font-family: "century_gothic_bold";font-weight:100;}
 .whiteBgLi li:before { color: red; }
 
 .wrapper{
@@ -209,7 +209,7 @@ ul.whiteBgLi{
 	cursor: pointer;
 }
 .menu-bar{
-	background-color: #4170A4;
+	background-color: #088e82;
     min-height: 55px;
     position: fixed;
     width: 100%;
@@ -230,7 +230,7 @@ ul.whiteBgLi{
 	-webkit-box-align: center;
 	-webkit-box-pack: center;
     margin:0px;
-	font-family: "Roboto-Bold";
+	font-family: "century_gothic_bold";
 }
 .menu-bar .icon{
 	display: none;
@@ -300,7 +300,7 @@ ul.whiteBgLi{
 	position: absolute;
 	bottom : 0;
 	padding: 0 5px;
-	background-color: #4170A4;
+	background-color: #088e82;
 	z-index: 9999;
 	transition: all 0.3s ease 0s;
 
@@ -356,7 +356,7 @@ ul.whiteBgLi{
 .greenBgHeader h4{
 	font-size: 1.4em;
 	padding: 8px !important;
-	font-family: "OpenSans-Semibold";
+	font-family: "century_gothic_bold";
 	background-color: #1CB2A0;
 	border-color: 2px solid #730035;
 	padding: 0px 0 0px 10px;
@@ -550,9 +550,9 @@ li.visited {
     background-color:#121212;
 }
 #menu-ul li {
-	color: #555555;
+	color: #303030;
 	/* font-family: "Roboto-Regular"; */
-	font-family: 'PT_Serif-Web-Regular';
+	font-family: 'century_gothic';
     text-indent:0px;
     background-position: 1px 8px;
     padding-left: 0;
@@ -667,7 +667,7 @@ margin-top: -1px;
 }
 
 .closeCustom{
-	background-color: #337ab7 !important;
+	background-color: #036259 !important;
     color: #FFF !important;
     padding: 7px !important;
     margin-top: -11px !important;
@@ -679,7 +679,7 @@ margin-top: -1px;
 
 .titleCustom{
 	text-align:center !important;
-	color:#337ab7 !important;
+	color:#036259 !important;
 	font-size:14pt !important;
 	
 	 overflow-wrap: break-word;
@@ -713,7 +713,7 @@ hyphens: auto;
     -webkit-background-clip: none;
     background-clip: none;
 
-    border: 2px solid #005184;
+    border: 2px solid #088e82;
     border-radius: 6px;
     outline: 0;
    -webkit-box-shadow:none;
@@ -794,7 +794,7 @@ hyphens: auto;
 
 #dialog-box .dialog-content #dialog-message .postTstPopUp h1{
 	text-align: center;
-	font-family: 'Roboto-Bold';
+	font-family: 'century_gothic_bold';
 	padding: 4% 0;
 	font-size: 21pt;
 }
@@ -875,7 +875,7 @@ a.button:hover {
     /* line-height: 100%;
     padding-top: 3%; */
 	    font-size: 16pt;
-		    font-family: 'PT_Serif-Web-Bold';
+		    font-family: 'century_gothic_bold';
 			font-weight:100;
 }
 
@@ -942,7 +942,7 @@ margin-bottom: 20px;
 	/* padding: 12px;  */
 }
 .timeout .timeout-icon , .timeout .timeout-head p {
-	 font-family: 'PT_Serif-Web-Bold';
+	 font-family: 'century_gothic_bold';
 	text-align: justify;
 	padding:7px !important;
 
@@ -951,7 +951,7 @@ margin-bottom: 20px;
 /* 	margin: 0 auto; */
 }
 .timeout .timeout-para p{
-	font-family: "PT_Serif-Web-Regular";
+	font-family: "century_gothic";
 	text-align: left;
 	padding: 5px;
 	font-weight: bold;
@@ -959,7 +959,7 @@ margin-bottom: 20px;
 }
 
 .timeout ul li{
-	font-family: "PT_Serif-Web-Bold";
+	font-family: "century_gothic_bold";
 	text-align: left;
 	padding: 5px;
 }
@@ -1017,9 +1017,10 @@ margin-bottom: 20px;
     padding-left: 0px;
     padding-right: 0px;
 }
-.box b{font-family: 'PT_Serif-Web-Bold';font-weight:normal;}.purpose b{font-family: 'PT_Serif-Web-Bold';font-weight:normal;}
-.box p {color: #005184;font-family: "PT_Serif-Web-Regular";
+.box b{font-family: 'century_gothic_bold';font-weight:normal;}.purpose b{font-family: 'century_gothic_bold';font-weight:normal;}
+.box p {color: #005184;font-family: "century_gothic";
     text-align: justify;
+	text-align: center;
     letter-spacing: 0px;
     font-size: 12pt;
    	padding: 0px 25px;
@@ -1028,7 +1029,7 @@ margin-bottom: 20px;
 .box  p.note { font-size: 10pt;}
 
 div.box ol > ul > li{color: #005184;
-font-family: 'PT_Serif-Web-Regular'; 
+font-family: 'century_gothic'; 
     cursor: default;
     margin-bottom: 5pt;
 
@@ -1040,7 +1041,7 @@ font-family: 'PT_Serif-Web-Regular';
 
 div.box ol > ul > li 	{  padding: 5px 15px 0px 20px;}
 div.box ol li{color: #005184;
-font-family: 'PT_Serif-Web-Regular'; 
+font-family: 'century_gothic'; 
     cursor: default;
  
 
@@ -1052,7 +1053,7 @@ font-family: 'PT_Serif-Web-Regular';
 	div.box  li{    padding: 5px 0 0px 0px;}
 		
 .box ul li{color: #005184;
-font-family: 'PT_Serif-Web-Regular'; 
+font-family: 'century_gothic'; 
     cursor: default;
    /* padding: 5px 15px 5px 43px;
      list-style-type: disc;
@@ -1070,8 +1071,8 @@ font-family: 'PT_Serif-Web-Regular';
 
 
 .box .table{
-	background-color: #e4f3fa;
-	border : 0px solid #e4f3fa;
+	background-color: #ffffff;
+	border : 1px solid #020202;
 	width: 80%;
 	margin-left: 10%;
     margin-right: 10%;
@@ -1092,7 +1093,7 @@ font-family: 'PT_Serif-Web-Regular';
 }
 .box .table tr td{
 	 border:1px solid #e4f3fa;
-	 font-family: "PT_Serif-Web-Regular";
+	 font-family: "century_gothic";
 	 text-align: left;
 	 letter-spacing: 0px;
 	 font-size: 12pt;
@@ -1110,7 +1111,7 @@ font-family: 'PT_Serif-Web-Regular';
 .box .box2{
 	background-color: #ffffff;
 	color: #6D6D6D;
-	font-family: "PT_Serif-Web-Regular";
+	font-family: "century_gothic";
 	 margin-left: 10%;
       margin-left: 10%;
     margin-right: 10%;
@@ -1118,7 +1119,7 @@ font-family: 'PT_Serif-Web-Regular';
 
 
 .box .box2 ul li{
-	font-family: 'PT_Serif-Web-Regular'; 
+	font-family: 'century_gothic'; 
 	padding: 7px 0px;
 	list-style-type:none;
 	text-indent: 0em;
@@ -1173,9 +1174,9 @@ text-align:left;}
 	background-color: #2DA2BF;
     color: #fff;
     border-bottom: 3px solid #fff;
-		font-family: 'Roboto-Bold';
+		font-family: 'century_gothic_bold';
 }
-.table-responsive .table td b{font-family: 'Roboto-Bold';}
+.table-responsive .table td b{font-family: 'century_gothic_bold';}
 .table-responsive .firstCol1{
 	background-color: #2DA2BF;
     color: #fff;
@@ -1266,7 +1267,7 @@ text-align:left;}
     min-height: 40px; 
 	color: #ffffff;
 	font-size: 1.2em;
-	font-family: "OpenSans-Semibold";
+	font-family: "century_gothic_bold";
 }
 .glyphicon-menu-right, .glyphicon-menu-left {
 	color: #FFFFFF;
@@ -1320,6 +1321,13 @@ text-align:left;}
 	margin: 0 auto 15px auto;
 }
 
+.thumbnails1{
+	padding: 0 10px !important;
+	max-width: 250px;
+	margin: 0 auto 15px auto;
+	
+}
+
 .contentCustom>.modal-header{background-color:white;}
 .content-right-panel [class*="col-sm-13"]
 {padding-left:0px;padding-right: 0px;}
@@ -1328,17 +1336,18 @@ text-align:left;}
 .content-right-panel [class*="col-lg-13"] 
 {padding-left:0px;padding-right: 0px;}
 
-div.qn-block{font-family: 'Roboto-Bold';}
+div.qn-block{font-family: 'century_gothic_bold';}
 label{font-weight:100;}
 
 b, strong {
     font-weight: 100;
-	    font-family: 'PT_Serif-Web-Bold';
+	    font-family: 'century_gothic_bold';
+		/*color: #241f1f;*/
 }
 
 .quote{
   
-    font-family: 'PT_Serif-Web-Regular'; 
+    font-family: 'century_gothic'; 
     margin-top: 3%;
     margin-bottom: 3%;
 	margin-left: 10%;
@@ -1434,7 +1443,7 @@ div.box .gap-left{margin: 5px 19px 0px 10px;}
 	 
 
 .menu-wrap2 {
-	background-color: #EFE9E9;
+	background-color: #ffffff;
 	position: fixed;
 	/* height: 82%; */
 	width: auto;
@@ -1646,11 +1655,38 @@ div.box .gap-left{margin: 5px 19px 0px 10px;}
 .next-nav-pos span {
 	/*line-height: 25px;*/
 }
-
+#nav-video {
+	color: #fff;
+    vertical-align: top;
+    font-size: 20px;
+    margin-right: 15px;
+    padding: 5px 0 0 4px;
+    min-height: 40px;
+    display: inline-block;
+}
+#nav-video.hide {
+	display: none;
+}
 .next-nav-pos .audio-pay {
 	display: none;
 }
-
+.video_btn_wrap {
+	margin: 10px 0;
+}
+.video_btn_wrap #video_btn {
+	margin: 10px 0;
+	font-size: 14px;
+	background-color: #42A0E7;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 2px;
+    border: 0;
+    font-family: "century_gothic_bold";
+    text-decoration: none;
+}
+.video_btn_wrap #video_btn:hover {
+	background: #2079bc;
+}
 .pre-test .form .radio.checked{
 	background:#ccc;
 	border-color: #aaa;
@@ -1681,14 +1717,15 @@ span.welcome-note-btn {
     bottom: 100px;
 }
 .welcome-note {
-    width: 90%;
+    width: 50%;
     background: #5d564b70;
     padding: 23px 10px 10px 40px;
-    border: solid 3px #b7afa2;
+    border: solid 1px #b7afa2;
     font-size: 15px;
     font-family: 'Roboto-Regular';
     color: #c5beb3;
-    margin-left: 5%;
+    margin-left: 49%;
+	
     display: block;
 }
 .next-btn {
@@ -1700,7 +1737,9 @@ span.welcome-note-btn {
     font-size:4em;
     color:#FFF;
     display: block;
-    text-align: center;
+    /* text-align: right; */
+	margin-left: 78%;
+	margin-top: -230px;
 }
 .intro-image img{
 	width:100%;
@@ -1831,7 +1870,42 @@ span.welcome-note-btn {
 
 .footer-bottom {
 	min-height: 40px;
-	background: #4170A4;
+	background: #088e82;
 	position: relative;
 	z-index: 14;
 }
+
+.acenter{
+	text-align: center;
+}			
+.aaa {
+    line-height: 0.5cm;
+}
+
+.thank{
+	border : 2px solid #088e82;
+	border-style: groove;
+	
+	
+}
+
+.popupImg1 {
+	margin: 0 auto;
+    /* cursor: pointer; */
+    z-index: 9999999;
+    background: url("../images/zoom-icon.png");
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #AAAAAA;
+}
+
+ .midal{
+		 margin-top:130px;
+	 }
+	 
+	 .mida2{
+		 margin-top:55px;
+	 }

@@ -7,18 +7,14 @@
                     sizes="(min-width: 1024px) 1024px, 98vw"> -->
                     <!-- <img src="images/fire.jpg"> -->
                     <picture>
-                        <source media="(min-width: 1200px)" srcset="images/fire.jpg">
-                        <source media="(min-width: 600px)" srcset="images/banner.jpg">
-                        <source media="(min-width: 320px)" srcset="images/fire.jpg">
+                        <source media="(min-width: 1200px)" srcset="images/Intro_1476X950_new.jpg">
+                        <source media="(min-width: 600px)" srcset="images/iPad_732X940_final.jpg">
+                        <source media="(min-width: 320px)" srcset="images/Mobile_View.jpg">
                         <img src="images/fire.jpg" alt="Flowers" style="width:auto;">
                     </picture>
                    <span class="welcome-note-btn">
                         <span class="welcome-note">
-                        Welcome! <br>
-                        Even if you never taken an eLearning Course, you will Succeedat this one.
-                        <br>
-                        It is esay. The key to success is to relax., have fun and learn. The duration of this course is !5 minutes. 
-                        <br>To get started click on the play/next button
+                        This course contains audio. Please use headphones and/or adjust the volume so that others working around you are not disturbed. <br/>Course duration: 30 min.
                         </span>
                         <span class="next-btn js-welcome-next">
                             <i class="far fa-play-circle"></i>
@@ -56,7 +52,7 @@ $(document).ready(function() {
 
         $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').parent().addClass('completed');
         $('#menu-sidebar2 .progress-wrapper-main .progress-label.completed').parent().next().find('.progress-label').addClass('selected');
-
+        
         if(menuData.modules[currentId].after_overlay) {
             loadAfterVideo(menuData.modules[currentId], $('#menu-ul li.selected').attr('data-title'))
         } else {
@@ -64,6 +60,7 @@ $(document).ready(function() {
 
             var obj = getIndexObjFromMenu($('#menu-ul li.selected').attr('data-title') , null);
             navigateToIndex(obj);
+            updateMenuVisiting($('#menu-ul li.selected').attr('data-title'))
         }
     });
 }); 

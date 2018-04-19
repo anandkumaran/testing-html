@@ -1,52 +1,50 @@
 {
   "questions": [{
-    "question": "1. In the event of a fire in your work area, your best course of action is to:",
+    "question": "1. Pharmacovigilance is concerned only about two outcomes regarding a drug. They are:",
     "id": "q1",
     "choices": [
-      "a) Attempt to fight the fire and rescue others",
-      "b) Leave the work area, using a designated escape route",
-      "c) Shelter in a room without windows",
-      "d) d Shelter in a room without windows"
+      "a) Safety",
+      "b) Expiry date",
+      "c) Relevance in market",
+      "d) Efficacy"
     ],
-    "correct": [1,2],
-    "rational": "Leave the work area, using a designated escape route as you should first move towards to a safe area in the case of a fire.",
+    "correct": [0,3],
+    "rational": "Pharmacovigilance is one of the most essential functions within a life science company. It is concerned only about two outcomes regarding a drug. They are: 1. Safety 2. Efficacy",
     "multi": true
   },
   {
-    "question": "2. True or False question?",
+    "question": "2. Rawlin and Thomas Classification was created is in regard to adverse drug reactions.",
     "id": "q2",
     "choices": [
       "True",
       "False"
     ],
     "correct": 0,
-    "rational": "A source of ignition, oxygen and fuel is needed to start a fire.",
+    "rational": "The Rawlin and Thomas Classification was devised in 1991. In this, Adverse Drug Reactions are divided into Type A, Type B and Others which include Type C, D and E.",
     "multi": false
   },
   {
-    "question": "3. To encourage compassion among colleagues one should:",
+    "question": "3. What is Adverse Effect?",
     "id": "q3",
     "choices": [
-      "a) Challenge negative behaviour",
-      "b) Only consider one&rsquo;s own perspective",
-      "c) Ignore students and bank staff",
-      "d) Tell others what to do"
+      "a) It is the undesired harmful effect resulting from any sort of medication, treatments or surgeries.",
+      "b) It is an injury resulting from the use of a drug",
+      "c) It is an injury caused by some medication."
     ],
-    "correct": 3,
-    "rational": "Tell others what to do",
+    "correct": 0,
+    "rational": "Adverse Effect is the undesired harmful effect resulting from any sort of medication, treatments or surgeries.",
     "multi": false
   },
   {
-    "question": "4. What are the three basic ingredients needed to start a fire?",
+    "question": "4. Pharmacodynamic effects are of two types – Desirable and undesirable.",
     "id": "q4",
     "choices": [
-      "a) A source of ignition, oxygen and fuel",
-      "b) Gasoline, matches and paper",
-      "c) Hydrogen, oxygen and flames",
-      "d) Withholding information"
+      "a) True",
+      "b) False"
+      
     ],
     "correct": 0,
-    "rational": "A source of ignition, oxygen and fuel is needed to start a fire.",
+    "rational": "Pharmacodynamics is the study of how a dug affects an organism. Pharmacodynamic effects are of two types – Desirable and undesirable.",
     "multi": false
   }
 ]
